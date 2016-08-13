@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6E752351D5FE3280035CD20 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E752341D5FE3280035CD20 /* ResultViewController.swift */; };
 		EC4B01721D5FC95A007FCBCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */; };
 		EC4B01741D5FC95A007FCBCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01731D5FC95A007FCBCF /* ViewController.swift */; };
 		EC4B01771D5FC95A007FCBCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4B01751D5FC95A007FCBCF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6E752341D5FE3280035CD20 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		EC4B016E1D5FC95A007FCBCF /* trumporfalse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trumporfalse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC4B01731D5FC95A007FCBCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		EC4B01701D5FC95A007FCBCF /* trumporfalse */ = {
 			isa = PBXGroup;
 			children = (
+				A6E752341D5FE3280035CD20 /* ResultViewController.swift */,
 				EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */,
 				EC4B01731D5FC95A007FCBCF /* ViewController.swift */,
 				EC4B01751D5FC95A007FCBCF /* Main.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				EC4B01741D5FC95A007FCBCF /* ViewController.swift in Sources */,
 				EC4B01721D5FC95A007FCBCF /* AppDelegate.swift in Sources */,
+				A6E752351D5FE3280035CD20 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +292,7 @@
 				EC4B01821D5FC95A007FCBCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
