@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kWf-eA-FXi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="RAo-Ov-ADD">
+            <objects>
+                <viewController id="kWf-eA-FXi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ff-AJ-NqJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ts7-3p-j7C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9sZ-jd-H9y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Trump Or False!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Th3-fg-a3B">
+                                <rect key="frame" x="52" y="273" width="217" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Th3-fg-a3B" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="EQd-oM-eGL"/>
+                            <constraint firstItem="Th3-fg-a3B" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="flt-zZ-z4O"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ph-z2-qPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="693"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,6 +53,20 @@
                                 <color key="textColor" red="0.27058823529411763" green="0.85098039215686272" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFw-uk-7i5">
+                                <rect key="frame" x="50" y="407" width="46" height="30"/>
+                                <state key="normal" title="TRUE"/>
+                                <connections>
+                                    <action selector="trueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iMn-Qx-sVi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSE-P3-Efu">
+                                <rect key="frame" x="225" y="399" width="45" height="45"/>
+                                <state key="normal" image="Cancel Filled-45"/>
+                                <connections>
+                                    <action selector="falseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NJR-kI-tGe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -30,10 +74,17 @@
                             <constraint firstItem="6Og-Q0-Q9i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MBR-X6-tlm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="ZSE-P3-Efu" id="gQF-6W-TaR"/>
+                        <outlet property="trueButton" destination="pFw-uk-7i5" id="nad-n4-wBH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.66666666666666" y="330.86000000000001"/>
+            <point key="canvasLocation" x="312" y="700"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cancel Filled-45" width="45" height="45"/>
+    </resources>
 </document>
