@@ -52,6 +52,7 @@ class ViewController: UIViewController {
 
     @IBAction func choseTrue(sender: UIButton) {
         print("You chose true")
+        ResultViewController.pressedButton()
     }
     
     
