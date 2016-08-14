@@ -42,7 +42,6 @@ class StartViewController: UIViewController {
     func animateFinger() {
         fingerPoint.hidden = false
         fingerPoint.alpha = 1;
-        print(fingerPoint.center.y)
         UIView.animateWithDuration(1.5, animations: {
             var newCenter = self.fingerPoint.center
             newCenter.y -= 130
@@ -56,8 +55,6 @@ class StartViewController: UIViewController {
                 self.fingerPoint.center.y += 130
                 self.fingerPoint.hidden = true
             }
-            
-            print(self.fingerPoint.center.y)
         }
 
     }

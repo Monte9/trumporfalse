@@ -60,6 +60,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     
     var streak = 0
  
+    var highestStreak: Int? = 0
     
 //    func applyBlurEffect(image: UIImage){
 //        var image : UIImage = UIImage(named:"usa_chicago_reflection_buildings_city_lights_58590_750x1334")!
@@ -94,6 +95,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         if !loadSettings() {
             registerDefaultSettings()
         }
+    
+        getHighestStreakCount()
         
         //Customize the navigation bar title and color
         let navigationBar = self.navigationController?.navigationBar
@@ -104,14 +107,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         navigationBar!.translucent = true
         
         //set navigation bar title with color
-        navigationItem.title = "Current High Score: 10"
+        navigationItem.title = "Current High Score: \(Int(highestStreak!))"
         navigationBar!.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.blackColor()]
         
         
         beginningCounter.text = "\(beginningCount)"
         play()
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
-        
     }
     
     func startGame() {
@@ -178,6 +180,23 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             return true
         }
         return false
+    }
+    
+    func storeHighestStreakCount() {
+        print("Current \(streak)")
+        print("HIGH: \(highestStreak)")
+        if (streak > highestStreak) {
+            let prefs = NSUserDefaults.standardUserDefaults()
+            prefs.setValue(streak, forKey: "high")
+        }
+        getHighestStreakCount()
+    }
+    
+    func getHighestStreakCount() {
+        let prefs = NSUserDefaults.standardUserDefaults()
+        let value = prefs.integerForKey("high")
+        print("GIT THIS: \(value)")
+        highestStreak = value
     }
 
     func beginningCountdown() {
@@ -272,12 +291,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
                         
                         self.playStatement()
                         //while (self.speechSynthesizer.speaking){}
-                        
-                        
-                        
-                        
-                        
-                        
                 })
         } 
         
@@ -294,6 +307,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             self.view.backgroundColor = UIColor(red: 157/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
             self.timeUpClock.hidden = false
             self.quoteBox.text = ""
+            self.storeHighestStreakCount()
             self.streak = 0
             self.streakLabel.text = String(self.streak)
             if(self.myTimer != nil) {
@@ -326,6 +340,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             self.falseButton.hidden = true
             self.wrongMark.alpha = 1.0
             self.quoteBox.text = ""
+            self.storeHighestStreakCount()
             self.streak = 0
             self.streakLabel.text = String(self.streak)
             if(self.myTimer != nil) {
@@ -344,6 +359,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             })
         }
     }
+    
+    
     
 }
 
