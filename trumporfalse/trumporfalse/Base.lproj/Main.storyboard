@@ -76,7 +76,13 @@
                             <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="y5c-et-xU2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="G93-8y-TaC"/>
+                    <navigationItem key="navigationItem" id="G93-8y-TaC">
+                        <barButtonItem key="rightBarButtonItem" image="info" id="bUB-1f-dnV">
+                            <connections>
+                                <segue destination="ifZ-Fy-yBu" kind="modal" id="cMc-hO-sd2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="fingerPoint" destination="oVF-LE-pdh" id="wuc-Kh-P9Q"/>
@@ -273,6 +279,48 @@
             </objects>
             <point key="canvasLocation" x="554" y="706"/>
         </scene>
+        <!--Rules View Controller-->
+        <scene sceneID="21C-De-ZAY">
+            <objects>
+                <viewController id="ifZ-Fy-yBu" customClass="RulesViewController" customModule="trumporfalse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="64Q-ao-6Ik"/>
+                        <viewControllerLayoutGuide type="bottom" id="hHr-qa-MDV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yp1-2H-noP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rules" translatesAutoresizingMaskIntoConstraints="NO" id="b1m-Tb-hIi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="YCz-gj-ZIt" appends="YES" id="94s-kT-s51"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b1m-Tb-hIi" firstAttribute="leading" secondItem="yp1-2H-noP" secondAttribute="leading" id="7jg-sq-vvh"/>
+                            <constraint firstItem="hHr-qa-MDV" firstAttribute="top" secondItem="b1m-Tb-hIi" secondAttribute="bottom" id="b7Q-DK-Kp1"/>
+                            <constraint firstItem="b1m-Tb-hIi" firstAttribute="top" secondItem="yp1-2H-noP" secondAttribute="top" id="g3w-Lg-ZNS"/>
+                            <constraint firstAttribute="trailing" secondItem="b1m-Tb-hIi" secondAttribute="trailing" id="lQh-XB-LQG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tapGesture" destination="YCz-gj-ZIt" id="3SF-JC-x4v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2B-0Z-Z6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YCz-gj-ZIt">
+                    <connections>
+                        <action selector="dismissViewFromTapGesture:" destination="ifZ-Fy-yBu" id="PFv-9f-Ybu"/>
+                        <outlet property="delegate" destination="b1m-Tb-hIi" id="9EX-vx-iZ4"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1269" y="-120"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="EFT-5y-IEY">
             <objects>
@@ -302,5 +350,8 @@
         <image name="correct-mark.png" width="512" height="512"/>
         <image name="elephant-republican-symbol" width="512" height="512"/>
         <image name="icon.png" width="512" height="512"/>
+        <image name="info" width="25" height="25"/>
+        <image name="rules" width="1080" height="1920"/>
     </resources>
+    <color key="tintColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
 </document>
