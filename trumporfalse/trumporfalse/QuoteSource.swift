@@ -64,7 +64,6 @@ class QuoteSource: NSObject {
         addEntry("I love the attention but I don't like too much of it.", isvalid: false)
         addEntry("Everyone thinks I’m such a nice guy.", isvalid: true)
         addEntry("Who says I am not under the special protection of God?", isvalid: false)
-        addEntry("It’s freezing and snowing in New York – we need global warming!", isvalid: true)
         addEntry("I still think I am the greatest.", isvalid: false)
         addEntry("I don't know what's better gettin' laid or gettin' paid.", isvalid: false)
         addEntry("I will go down as the voice of this generation, of this decade, I will be the loudest voice.", isvalid: false)
