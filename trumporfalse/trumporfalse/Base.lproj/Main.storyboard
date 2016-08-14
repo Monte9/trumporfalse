@@ -19,8 +19,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="elephant-republican-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-f6-clV">
-                                <rect key="frame" x="0.0" y="0.0" width="512" height="512"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New-York-City-Wallpaper-For-Iphone-6" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-92-lHn">
+                                <rect key="frame" x="0.0" y="64" width="750" height="672"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1334" id="75D-YU-Lei"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="AVt-SR-qu2"/>
+                                    <constraint firstAttribute="width" constant="750" id="cVi-WX-XU7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elephant-republican-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-f6-clV">
+                                <rect key="frame" x="187" y="75" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BpP-IH-SwN"/>
+                                    <constraint firstAttribute="width" constant="40" id="if4-pI-GTU"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-Oe-mi3">
                                 <rect key="frame" x="82" y="243" width="250" height="250"/>
@@ -33,14 +45,6 @@
                                     <segue destination="BYZ-38-t0r" kind="push" id="9YH-Y4-7S2"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New-York-City-Wallpaper-For-Iphone-6" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-92-lHn">
-                                <rect key="frame" x="0.0" y="64" width="750" height="672"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1334" id="75D-YU-Lei"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="AVt-SR-qu2"/>
-                                    <constraint firstAttribute="width" constant="750" id="cVi-WX-XU7"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -49,10 +53,12 @@
                             <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="HS5-l2-ig4"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="JT1-X7-Fh0"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="Jrr-D7-WDf"/>
+                            <constraint firstItem="DLf-f6-clV" firstAttribute="top" secondItem="9sZ-jd-H9y" secondAttribute="top" constant="75" id="K0v-Wy-0D1"/>
                             <constraint firstAttribute="trailing" secondItem="xzg-92-lHn" secondAttribute="trailing" id="OpZ-LD-KKY"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="leading" secondItem="9sZ-jd-H9y" secondAttribute="leading" id="PjC-h0-evO"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="top" secondItem="6ff-AJ-NqJ" secondAttribute="bottom" id="eXG-V9-h2e"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="hxa-cj-2mV"/>
+                            <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="y5c-et-xU2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trump Or False" id="G93-8y-TaC"/>
@@ -65,6 +71,7 @@
         <!--Trump Or False-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="trumporfalse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -87,7 +94,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dD-oV-uBY">
-                                <rect key="frame" x="215" y="479" width="166" height="46"/>
+                                <rect key="frame" x="215" y="510" width="166" height="46"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="A3z-5x-aiF"/>
@@ -102,7 +109,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ya1-gc-VTt">
-                                <rect key="frame" x="34" y="479" width="166" height="46"/>
+                                <rect key="frame" x="34" y="510" width="166" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="T R U E">
@@ -152,6 +159,9 @@
                                     <constraint firstAttribute="height" constant="300" id="d5A-Qh-IHx"/>
                                 </constraints>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alarm Clock-96" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-JF-Asg">
+                                <rect key="frame" x="159" y="320" width="96" height="96"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -159,16 +169,18 @@
                             <constraint firstItem="sjh-5J-kWC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2b4-CV-hfp"/>
                             <constraint firstItem="Ya1-gc-VTt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="9EQ-b1-DH6"/>
                             <constraint firstItem="ya1-an-Mk8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9P0-A4-3kG"/>
-                            <constraint firstItem="8dD-oV-uBY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="479" id="9We-JI-met"/>
+                            <constraint firstItem="8dD-oV-uBY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="510" id="9We-JI-met"/>
                             <constraint firstItem="sjh-5J-kWC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="9jU-da-B8a"/>
                             <constraint firstItem="MpP-Wp-KlV" firstAttribute="leading" secondItem="wAE-qA-ei9" secondAttribute="trailing" constant="5" id="HHS-9g-vD7"/>
                             <constraint firstItem="sjh-5J-kWC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HSn-en-y9Q"/>
                             <constraint firstItem="2f4-hL-5so" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LDV-sg-aSB"/>
                             <constraint firstItem="MpP-Wp-KlV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="Omy-If-JSf"/>
+                            <constraint firstItem="V7e-JF-Asg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RMD-l7-3x1"/>
                             <constraint firstItem="l5V-4O-rK8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="VM2-e4-tf6"/>
                             <constraint firstItem="MYO-9q-VB6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XUI-2x-6vU"/>
                             <constraint firstAttribute="trailing" secondItem="sjh-5J-kWC" secondAttribute="trailing" constant="8" id="awH-vq-6pV"/>
                             <constraint firstItem="2f4-hL-5so" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="110" id="cQQ-lF-ei2"/>
+                            <constraint firstItem="V7e-JF-Asg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eiB-OB-E7g"/>
                             <constraint firstItem="gfs-Dq-3J8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="hnk-fr-KCA"/>
                             <constraint firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ivR-0V-7Gw"/>
                             <constraint firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ivU-MU-80k"/>
@@ -189,11 +201,11 @@
                         <outlet property="falseButton" destination="8dD-oV-uBY" id="b2H-wy-8yu"/>
                         <outlet property="quoteBox" destination="sjh-5J-kWC" id="JmW-fV-mz1"/>
                         <outlet property="streakLabel" destination="l5V-4O-rK8" id="w1w-ro-Raj"/>
+                        <outlet property="timeUpClock" destination="V7e-JF-Asg" id="1Qy-3C-Sb7"/>
                         <outlet property="trueButton" destination="Ya1-gc-VTt" id="EBk-bo-Ir6"/>
                         <outlet property="wrongMark" destination="MYO-9q-VB6" id="RkK-RY-Ze3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1413" y="706"/>
         </scene>
@@ -217,6 +229,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Alarm Clock-96" width="96" height="96"/>
         <image name="Gas-96" width="96" height="96"/>
         <image name="New-York-City-Wallpaper-For-Iphone-6" width="1080" height="1920"/>
         <image name="Stopwatch-104.png" width="104" height="104"/>
