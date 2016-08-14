@@ -188,6 +188,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func showAnotherQuote(){
         correctMark.alpha = 0
         correctMark.hidden = false
+        
+        if (speechSynthesizer.speaking) {
+            speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+        }
+
         UIView.animateWithDuration(0.75, animations: {
             self.trueButton.hidden = true
             self.falseButton.hidden = true
@@ -222,6 +227,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func timeLost() {
+        if (speechSynthesizer.speaking) {
+            speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+        }
+
         UIView.animateWithDuration(1.5, animations: {
             self.quoteBox.text = "TIME'S UP!"
             self.streak = 0
@@ -244,6 +253,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func showLoseScreen() {
         wrongMark.alpha = 0.0
         wrongMark.hidden = false
+        
+        if (speechSynthesizer.speaking) {
+            speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+        }
+
         UIView.animateWithDuration(1, animations: {
             self.trueButton.hidden = true
             self.falseButton.hidden = true
