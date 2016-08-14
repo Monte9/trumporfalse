@@ -10,7 +10,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesizerDelegate {
     
     
     struct Quote {
@@ -39,6 +39,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
      // text-to-speech code
     let speechSynthesizer = AVSpeechSynthesizer()
+    
     var rate: Float!
     var pitch: Float!
     var volume: Float!
@@ -75,8 +76,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
+        speechSynthesizer.delegate = self
+        
         countdownTimer.text = "\(countdown)"
         
         streakLabel.text = String(streak)
@@ -100,6 +101,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             self.playStatement()
         }
         
+        //while (speechSynthesizer.speaking){}
+        
+        
+    }
+
+    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance) {
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
+
     }
     
     func play() {
@@ -215,12 +224,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         //self.trumpImage_pos.hidden = false
                         
                         self.countdown = 10
-                        self.myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
                         self.countdownTimer.text = "\(self.countdown)"
-                        
                         self.streak += 1
                         self.streakLabel.text = String(self.streak)
+                        
                         self.playStatement()
+                        //while (self.speechSynthesizer.speaking){}
+                        
+                        
+                        
+                        
+                        
+                        
                 })
         } 
         
