@@ -35,10 +35,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var pitch: Float!
     var volume: Float!
     
-    
-
-    
-    
     var countdown = 10
     var myTimer: NSTimer? = nil
     
@@ -114,23 +110,24 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 //        
 //    }
 //
+    
     func play() {
-        var player: AVAudioPlayer! = nil
         
-        do {
-            var targetURL : NSURL? = NSBundle.mainBundle().URLForResource("Checked-528", withExtension: "png")
-            print(targetURL)
-            let path = NSBundle.mainBundle().pathForResource("trumpAudio", ofType:"m4a")
-            let fileURL = NSURL(fileURLWithPath: path!)
-            try player = AVAudioPlayer(contentsOfURL: fileURL)
-            player.prepareToPlay()
-            player.delegate = self
-            player.play()
-        } catch {
-            print("error initializing AVAudioPlayer")
-        }
+        print("GETTING IT NOW>..")
+        var filePath = NSBundle.mainBundle().pathForResource("trumpAudio", ofType:"m4a")
+       // var beepPlayer = AVAudioPlayer()
+
+        print(filePath)
+
+//        beepPlayer = AVAudioPlayer(contentsOfURL: beepSoundURL)
+//        beepPlayer.prepareToPlay()
+//        beepPlayer.play()
     }
     
+    
+    func playMySound(){
+        
+    }
     func playSound(nameOfAudioFileInAssetCatalog: String) {
         var alarmAudioPlayer: AVAudioPlayer?
         if let sound = NSDataAsset(name: nameOfAudioFileInAssetCatalog) {

@@ -6,6 +6,5 @@ target 'trumporfalse' do
   use_frameworks!
 
   # Pods for trumporfalse
-  pod 'RealmSwift', '~> 1.0'
 
 end
