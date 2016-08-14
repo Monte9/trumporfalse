@@ -88,6 +88,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         countdownTimer.text = "\(countdown)"
         streakLabel.text = String(streak)
         quoteBox.text = ""
+        quoteBox.backgroundColor = UIColor(red: 255/255.0, green: 252/255.0, blue: 240/255.0, alpha: 1.0)
+        quoteBox.layer.cornerRadius = 20
+        quoteBox.clipsToBounds = true
         trueButton.hidden = true
         falseButton.hidden = true
         
@@ -109,9 +112,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         //set navigation bar title with color
         navigationItem.title = "High Score: \(Int(highestStreak!))"
         navigationBar!.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.blackColor()]
+        self.quoteBox.backgroundColor = UIColor(white: 1, alpha: 0.5)
         
         beginningCounter.text = "\(beginningCount)"
         play()
+        
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
     }
     
@@ -209,6 +214,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
                 (true) in
                 self.beginningCounter.hidden = true
                 self.startGame()
+                self.quoteBox.backgroundColor = UIColor(red: 171/255.0, green: 155/255.0, blue: 106/255.0, alpha: 1.0)
             }
             
         }
@@ -263,6 +269,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.correctMark.alpha = 1.0
+            self.quoteBox.backgroundColor = UIColor(white: 1, alpha: 0.5)
             self.quoteBox.text = ""
             if(self.myTimer != nil) {
                 self.myTimer!.invalidate()
@@ -276,11 +283,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
                         self.index += 1
                         self.index = self.index % self.quotes.numEntries
                         self.quoteBox.text = self.quotes.quotes[self.index]!.statement
-                    
+                        
                         //self.trueButton.hidden = false
                         //self.falseButton.hidden = false
                         //self.trumpImage_pos.hidden = false
-                        
+                        self.quoteBox.backgroundColor = UIColor(red: 171/255.0, green: 155/255.0, blue: 106/255.0, alpha: 1.0)
                         self.countdown = 10
                         self.countdownTimer.text = "\(self.countdown)"
                         self.streak += 1
@@ -305,6 +312,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             self.view.backgroundColor = UIColor(red: 157/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
             self.timeUpClock.hidden = false
             self.quoteBox.text = ""
+            self.quoteBox.hidden = true
             self.storeHighestStreakCount()
             self.streak = 0
             self.streakLabel.text = String(self.streak)
@@ -337,6 +345,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.wrongMark.alpha = 1.0
+            self.quoteBox.backgroundColor = UIColor(white: 1, alpha: 0.5)
             self.quoteBox.text = ""
             self.storeHighestStreakCount()
             self.streak = 0
