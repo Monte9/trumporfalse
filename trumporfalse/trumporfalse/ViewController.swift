@@ -1,3 +1,4 @@
+
 //
 //  ViewController.swift
 //  trumporfalse
@@ -26,9 +27,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var quoteBox: UILabel!
     @IBOutlet weak var streakLabel: UILabel!
     @IBOutlet weak var countdownTimer: UILabel!
-    @IBOutlet weak var trumpImage: UIImageView!
+    @IBOutlet weak var trumpImage_neg: UIImageView!
     
-    // text-to-speech code
+    
+    
+   // @IBOutlet weak var trumpImage_pos: UIImageView!
+    
+     // text-to-speech code
     let speechSynthesizer = AVSpeechSynthesizer()
     var rate: Float!
     var pitch: Float!
@@ -111,14 +116,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 //
     
     func play() {
-        if let path = NSBundle.mainBundle().pathForResource("mysound", ofType: "aiff") {
-            audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "aiff", error: nil)
-            
-            if let sound = audioPlayer {
-                sound.prepareToPlay()
-                sound.play()
-            }
-        }
+//        if let path = NSBundle.mainBundle().pathForResource("mysound", ofType: "aiff") {
+//            audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "aiff", error: nil)
+//            
+//            if let sound = audioPlayer {
+//                sound.prepareToPlay()
+//                sound.play()
+//            }
+//        }
     }
     
     
@@ -225,9 +230,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         self.index = self.index % self.quotes.count
                         self.quoteBox.text = self.quotes[self.index]?.statement
                         self.view.backgroundColor = UIColor.whiteColor()
+                        //self.trumpImage_pos.hidden = false
+                        
                         self.countdown = 10
                         self.myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
                         self.countdownTimer.text = "\(self.countdown)"
+                        
                         self.streak += 1
                         self.streakLabel.text = String(self.streak)
                         self.playStatement()                })
@@ -248,7 +256,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             UIView.animateWithDuration(5.0, animations: { 
                 self.index = 1
                 self.view.backgroundColor = UIColor.whiteColor()
-                self.trumpImage.hidden = false
+                self.trumpImage_neg.hidden = false
                 }, completion: { (true) in
                     let start_game_storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc: UIViewController = start_game_storyboard.instantiateViewControllerWithIdentifier("startViewController") as UIViewController

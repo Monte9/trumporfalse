@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9sg-sB-Afg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9sg-sB-Afg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,9 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-Oe-mi3">
-                                <rect key="frame" x="122" y="269" width="76" height="30"/>
-                                <state key="normal" title="Start game"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-Oe-mi3">
+                                <rect key="frame" x="35" y="158.5" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Voe-gs-kMJ"/>
+                                    <constraint firstAttribute="height" constant="250" id="uAz-zg-Ajd"/>
+                                </constraints>
+                                <state key="normal" title="Start game" image="Trump_home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="push" id="9YH-Y4-7S2"/>
                                 </connections>
@@ -103,11 +107,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trump" translatesAutoresizingMaskIntoConstraints="NO" id="nJt-Ov-A7Z">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trump_neg" translatesAutoresizingMaskIntoConstraints="NO" id="7OF-V6-mGu">
                                 <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="UJv-XW-YRU"/>
-                                    <constraint firstAttribute="height" constant="320" id="hXJ-Ph-pEn"/>
+                                    <constraint firstAttribute="width" constant="320" id="5Ug-5a-X5D"/>
+                                    <constraint firstAttribute="height" constant="320" id="vbQ-Bg-TsH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trump_pos" translatesAutoresizingMaskIntoConstraints="NO" id="f6T-oD-WT7">
+                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="JtI-wx-8AE"/>
+                                    <constraint firstAttribute="height" constant="320" id="Yv5-Q4-HeJ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -120,11 +131,13 @@
                             <constraint firstItem="sjh-5J-kWC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="9jU-da-B8a"/>
                             <constraint firstItem="MpP-Wp-KlV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Omy-If-JSf"/>
                             <constraint firstItem="l5V-4O-rK8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="VM2-e4-tf6"/>
+                            <constraint firstItem="f6T-oD-WT7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W0W-kx-BeU"/>
+                            <constraint firstItem="7OF-V6-mGu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zct-Am-bft"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pff-m7-rJW" secondAttribute="bottom" constant="60" id="arV-1y-Ocj"/>
                             <constraint firstAttribute="trailing" secondItem="sjh-5J-kWC" secondAttribute="trailing" constant="8" id="awH-vq-6pV"/>
                             <constraint firstItem="pff-m7-rJW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="e64-Sk-L6f"/>
-                            <constraint firstItem="nJt-Ov-A7Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ivR-0V-7Gw"/>
-                            <constraint firstItem="nJt-Ov-A7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ivU-MU-80k"/>
+                            <constraint firstItem="f6T-oD-WT7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fNk-M9-8kk"/>
+                            <constraint firstItem="7OF-V6-mGu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g9d-xq-kXf"/>
                             <constraint firstItem="sjh-5J-kWC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wti-aL-F40"/>
                             <constraint firstItem="l5V-4O-rK8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zyh-Co-0Bx"/>
                         </constraints>
@@ -134,7 +147,7 @@
                         <outlet property="countdownTimer" destination="MpP-Wp-KlV" id="SXV-Dp-CiJ"/>
                         <outlet property="quoteBox" destination="sjh-5J-kWC" id="JmW-fV-mz1"/>
                         <outlet property="streakLabel" destination="l5V-4O-rK8" id="w1w-ro-Raj"/>
-                        <outlet property="trumpImage" destination="nJt-Ov-A7Z" id="dUJ-0T-5gF"/>
+                        <outlet property="trumpImage_neg" destination="7OF-V6-mGu" id="auc-fV-HF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -200,6 +213,8 @@
     <resources>
         <image name="CorrectAnswerImage" width="528" height="528"/>
         <image name="IncorrectAnswerImage" width="528" height="528"/>
-        <image name="trump" width="1707" height="2331"/>
+        <image name="Trump_home" width="770" height="773"/>
+        <image name="Trump_neg" width="770" height="773"/>
+        <image name="Trump_pos" width="835" height="837"/>
     </resources>
 </document>
