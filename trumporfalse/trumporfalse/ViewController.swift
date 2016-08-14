@@ -28,10 +28,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var quoteBox: UILabel!
     @IBOutlet weak var streakLabel: UILabel!
     @IBOutlet weak var countdownTimer: UILabel!
-    @IBOutlet weak var trumpImage_neg: UIImageView!
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     
+    @IBOutlet weak var correctMark: UIImageView!
+    @IBOutlet weak var wrongMark: UIImageView!
     
     
    // @IBOutlet weak var trumpImage_pos: UIImageView!
@@ -93,7 +94,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         UIView.animateWithDuration(1.5, animations: {
             self.play()
-            self.view.backgroundColor = UIColor.blackColor()
+            self.view.backgroundColor = UIColor.whiteColor()
         }) {
             (true) in
             self.playStatement()
@@ -183,17 +184,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    
     func showAnotherQuote(){
-        UIView.animateWithDuration(1.5, animations: {
+        correctMark.alpha = 0
+        correctMark.hidden = false
+        UIView.animateWithDuration(0.75, animations: {
             self.trueButton.hidden = true
             self.falseButton.hidden = true
-            self.quoteBox.text = "CORRECT!"
-            self.view.backgroundColor = UIColor.greenColor()
+            self.correctMark.alpha = 1.0
+            self.quoteBox.text = ""
             self.myTimer!.invalidate()
             }) { (true) in
-                UIView.animateWithDuration(1.0, animations: {
-                    self.view.backgroundColor = UIColor.blackColor()
+                UIView.animateWithDuration(0.5, animations: {
+                        self.correctMark.alpha = 0.00
                     }, completion: { (true) in
+                       
+                        self.correctMark.hidden = true
                         self.index += 1
                         self.index = self.index % self.quotes.count
                         self.quoteBox.text = self.quotes[self.index]?.statement
@@ -223,10 +229,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             self.view.backgroundColor = UIColor.redColor()
             self.myTimer!.invalidate()
         }) { (true) in
-            UIView.animateWithDuration(2.0, animations: {
+            UIView.animateWithDuration(4.0, animations: {
                 self.index = 1
                 self.view.backgroundColor = UIColor.whiteColor()
-                self.trumpImage_neg.hidden = false
                 }, completion: { (true) in
                     let start_game_storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc: UIViewController = start_game_storyboard.instantiateViewControllerWithIdentifier("HomeNavigationController") as UIViewController
@@ -237,18 +242,23 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func showLoseScreen() {
-        UIView.animateWithDuration(1.5, animations: {
-            self.quoteBox.text = "INCORRECT!"
+        wrongMark.alpha = 0.0
+        wrongMark.hidden = false
+        UIView.animateWithDuration(1, animations: {
+            self.trueButton.hidden = true
+            self.falseButton.hidden = true
+            self.wrongMark.alpha = 1.0
+            self.quoteBox.text = ""
             self.streak = 0
             self.streakLabel.text = String(self.streak)
-            self.view.backgroundColor = UIColor.redColor()
             self.myTimer!.invalidate()
         }) { (true) in
-            UIView.animateWithDuration(2.0, animations: {
+            UIView.animateWithDuration(0.5, animations: {
                 self.index = 1
-                self.view.backgroundColor = UIColor.whiteColor()
-                self.trumpImage_neg.hidden = false
+                print(self.wrongMark.alpha)
+                self.wrongMark.alpha = 0.0
                 }, completion: { (true) in
+                    self.wrongMark.hidden = true
                     let start_game_storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc: UIViewController = start_game_storyboard.instantiateViewControllerWithIdentifier("HomeNavigationController") as UIViewController
                     self.presentViewController(vc, animated: true, completion: nil)

@@ -24,8 +24,8 @@
                                     <constraint firstAttribute="height" constant="100" id="Mdy-08-UYB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A l l   r i g h t s  r e s e r v e d.  ©" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icN-d4-CUh">
-                                <rect key="frame" x="0.0" y="199" width="230.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A l l   r i g h t s  r e s e r v e d.  ©" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icN-d4-CUh">
+                                <rect key="frame" x="45" y="414" width="230.5" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,10 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="icN-d4-CUh" firstAttribute="top" secondItem="DhJ-3O-cPa" secondAttribute="bottom" constant="80" id="3Po-7L-xF0"/>
+                            <constraint firstItem="icN-d4-CUh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Gh6-eB-JxJ"/>
                             <constraint firstItem="DhJ-3O-cPa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HbN-x7-sW6"/>
                             <constraint firstItem="DhJ-3O-cPa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WUR-LT-480"/>
-                            <constraint firstItem="icN-d4-CUh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xwp-Gi-pVS"/>
-                            <constraint firstItem="icN-d4-CUh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="20" id="iwz-7P-Nua"/>
                         </constraints>
                     </view>
                 </viewController>
