@@ -34,6 +34,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var pitch: Float!
     var volume: Float!
     
+    var audioPlayer: AVAudioPlayer?
+    
     var countdown = 10
     var myTimer: NSTimer? = nil
     
@@ -41,7 +43,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var index = 0
     
     var streak = 0
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,8 +51,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         countdownTimer.text = "\(countdown)"
         
         streakLabel.text = String(streak)
-        
-
         
         quotes[0] = Quote(statement: "Donald Trump!", valid: false)
         quotes[1] = Quote(statement: "My IQ is one of the highest — and you all know it! Please don't feel so stupid or insecure; it's not your fault.", valid: true)
@@ -63,81 +63,20 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             registerDefaultSettings()
         }
         
-        //playStatement()
-        //playSound("Desiigner")
-        
         play()
-        
-        //addQuotesToRealmDB()
-        
-       // readCSVFile()
-    
     }
-
-//    func addQuotesToRealmDB() {
-//        
-//        let quote = Quote()
-//        quote.
-//        
-//        try! realm.write {
-//            realm.add(myDog)
-//        }
-//        
-//        let myPuppy = realm.objects(Dog.self).filter("age == 1").first
-//        try! realm.write {
-//            myPuppy!.age = 2
-//        }
-//        
-//        print("age of my dog: \(myDog.age)") // => 2
-//    }
-//    
-//    func readCSVFile() {
-//        print("Heelo")
-//        
-//        var filePath = NSBundle.mainBundle().pathForResource("hello", ofType:"txt")
-//        var data = NSData(contentsOfFile:filePath!)
-//        
-//        if let data = NSData(contentsOfURL: contentsOfURL) {
-//            if let content = NSString(data: data, encoding: NSUTF8StringEncoding) {
-//                //existing code
-//            }
-//        }
-//        
-//        
-//        print(data)
-//
-//        
-//    }
-//
     
     func play() {
-        if let path = NSBundle.mainBundle().pathForResource("mysound", ofType: "aiff") {
-            audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "aiff", error: nil)
-            
-            if let sound = audioPlayer {
-                sound.prepareToPlay()
-                sound.play()
+        do {
+            if let path = NSBundle.mainBundle().pathForResource("trumpAudio", ofType: "mp3") {
+                try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "mp3")
+                if let sound = audioPlayer {
+                    sound.prepareToPlay()
+                    sound.play()
+                }
             }
-        }
-    }
-    
-    
-    func playMySound(){
-        
-    }
-    func playSound(nameOfAudioFileInAssetCatalog: String) {
-        var alarmAudioPlayer: AVAudioPlayer?
-        if let sound = NSDataAsset(name: nameOfAudioFileInAssetCatalog) {
-            do {
-                print("here")
-                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try! AVAudioSession.sharedInstance().setActive(true)
-                try alarmAudioPlayer = AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
-                alarmAudioPlayer!.play()
-                print(alarmAudioPlayer)
-            } catch {
-                print("error initializing AVAudioPlayer")
-            }
+        } catch {
+            print("error initializing AVAudioPlayer")
         }
     }
 
@@ -199,11 +138,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
 
     @IBAction func choseTrue(sender: UIButton) {
-
-        
         var quote = quotes[index]
 
-        
         if (quote?.valid)! {
             showAnotherQuote()
         } else {
@@ -219,7 +155,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             self.myTimer!.invalidate()
             }) { (true) in
                 UIView.animateWithDuration(1.0, animations: {
-                    self.playSound("trumpAudio")
+                    self.play()
                     }, completion: { (true) in
                         self.index += 1
                         self.index = self.index % self.quotes.count
@@ -230,10 +166,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         self.countdownTimer.text = "\(self.countdown)"
                         self.streak += 1
                         self.streakLabel.text = String(self.streak)
-                        self.playStatement()                })
-                
+                        self.playStatement()
+                })
         }
-        
         
     }
     
@@ -251,13 +186,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 self.trumpImage.hidden = false
                 }, completion: { (true) in
                     let start_game_storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc: UIViewController = start_game_storyboard.instantiateViewControllerWithIdentifier("startViewController") as UIViewController
+                    let vc: UIViewController = start_game_storyboard.instantiateViewControllerWithIdentifier("HomeNavigationController") as UIViewController
                     self.presentViewController(vc, animated: true, completion: nil)
             })
         }
-    
     }
-    
     
 }
 
