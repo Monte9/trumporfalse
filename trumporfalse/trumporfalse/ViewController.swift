@@ -10,8 +10,7 @@
 import UIKit
 import AVFoundation
 
-
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesizerDelegate {
     
     
 //    struct Quote {
@@ -35,11 +34,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var correctMark: UIImageView!
     @IBOutlet weak var wrongMark: UIImageView!
     
+    @IBOutlet weak var timeUpClock: UIImageView!
+    
+    
+    
     
    // @IBOutlet weak var trumpImage_pos: UIImageView!
     
      // text-to-speech code
     let speechSynthesizer = AVSpeechSynthesizer()
+    
     var rate: Float!
     var pitch: Float!
     var volume: Float!
@@ -76,8 +80,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
+        speechSynthesizer.delegate = self
+        
         countdownTimer.text = "\(countdown)"
         
         streakLabel.text = String(streak)
@@ -97,6 +101,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             self.playStatement()
         }
         
+        //while (speechSynthesizer.speaking){}
+        
+        
+    }
+
+    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance) {
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
+
     }
     
     func play() {
@@ -210,12 +222,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         //self.trumpImage_pos.hidden = false
                         
                         self.countdown = 10
-                        self.myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
                         self.countdownTimer.text = "\(self.countdown)"
-                        
                         self.streak += 1
                         self.streakLabel.text = String(self.streak)
+                        
                         self.playStatement()
+                        //while (self.speechSynthesizer.speaking){}
+                        
+                        
+                        
+                        
+                        
+                        
                 })
         } 
         
@@ -227,13 +245,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
 
         UIView.animateWithDuration(1.5, animations: {
-            self.quoteBox.text = "TIME'S UP!"
+            self.trueButton.hidden = true
+            self.falseButton.hidden = true
+            self.view.backgroundColor = UIColor(red: 157/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+            self.timeUpClock.hidden = false
+            self.quoteBox.text = ""
             self.streak = 0
             self.streakLabel.text = String(self.streak)
-            self.view.backgroundColor = UIColor.redColor()
             self.myTimer!.invalidate()
         }) { (true) in
-            UIView.animateWithDuration(4.0, animations: {
+            UIView.animateWithDuration(2.0, animations: {
                 self.index = 1
                 self.view.backgroundColor = UIColor.whiteColor()
                 }, completion: { (true) in
