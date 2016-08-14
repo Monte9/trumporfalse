@@ -115,7 +115,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         self.quoteBox.backgroundColor = UIColor(white: 1, alpha: 0.5)
         
         beginningCounter.text = "\(beginningCount)"
-        play()
+        play("trumpAudio")
         
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
     }
@@ -137,9 +137,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         falseButton.hidden = false
     }
     
-    func play() {
+    func play(s : String) {
         do {
-            if let path = NSBundle.mainBundle().pathForResource("trumpAudio", ofType: "mp3") {
+            if let path = NSBundle.mainBundle().pathForResource(s, ofType: "mp3") {
                 try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "mp3")
                 if let sound = audioPlayer {
                     sound.prepareToPlay()
@@ -266,6 +266,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(0.75, animations: {
+            self.play("yourereallysmart")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.correctMark.alpha = 1.0
@@ -307,6 +308,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(1.5, animations: {
+            self.play("stupid")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.view.backgroundColor = UIColor(red: 157/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
@@ -342,6 +344,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(1, animations: {
+            self.play("stupid")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.wrongMark.alpha = 1.0
