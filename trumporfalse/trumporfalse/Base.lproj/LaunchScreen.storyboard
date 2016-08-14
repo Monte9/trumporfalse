@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,34 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trump Or False" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbf-V1-cHq">
-                                <rect key="frame" x="50" y="262" width="220" height="44"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
-                                <color key="textColor" red="0.93333333333333335" green="0.14509803921568626" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dtrump_loading_screen" translatesAutoresizingMaskIntoConstraints="NO" id="eXY-ho-HAG">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elephant-republican-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="DhJ-3O-cPa">
+                                <rect key="frame" x="100" y="234" width="120" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="750" id="HWs-Jp-1av"/>
-                                    <constraint firstAttribute="width" constant="750" id="Mk0-UL-cQO"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1334" id="cge-Ab-t0M"/>
-                                    <constraint firstAttribute="height" constant="1334" id="gI3-Zg-G2c"/>
+                                    <constraint firstAttribute="width" constant="120" id="HEH-Pb-ylk"/>
+                                    <constraint firstAttribute="height" constant="100" id="Mdy-08-UYB"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A l l   r i g h t s  r e s e r v e d.  ©" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icN-d4-CUh">
+                                <rect key="frame" x="0.0" y="199" width="230.5" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="eXY-ho-HAG" secondAttribute="bottom" id="07o-sJ-xtH"/>
-                            <constraint firstItem="eXY-ho-HAG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="3dN-W2-ISK"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="eXY-ho-HAG" secondAttribute="bottom" id="8FC-ra-iY5"/>
-                            <constraint firstAttribute="trailing" secondItem="eXY-ho-HAG" secondAttribute="trailing" id="WDF-yS-DWZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eXY-ho-HAG" secondAttribute="trailing" id="b4n-LE-n8j"/>
-                            <constraint firstItem="eXY-ho-HAG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="c9J-rn-vJ0"/>
-                            <constraint firstItem="eXY-ho-HAG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="eun-3A-p9R"/>
-                            <constraint firstItem="eXY-ho-HAG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="hJP-yO-Jpr"/>
-                            <constraint firstItem="rbf-V1-cHq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tSJ-JB-cDM"/>
-                            <constraint firstItem="rbf-V1-cHq" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="yme-gh-x88"/>
+                            <constraint firstItem="DhJ-3O-cPa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HbN-x7-sW6"/>
+                            <constraint firstItem="DhJ-3O-cPa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WUR-LT-480"/>
+                            <constraint firstItem="icN-d4-CUh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xwp-Gi-pVS"/>
+                            <constraint firstItem="icN-d4-CUh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="20" id="iwz-7P-Nua"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -55,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dtrump_loading_screen" width="750" height="1334"/>
+        <image name="elephant-republican-symbol" width="512" height="512"/>
     </resources>
 </document>

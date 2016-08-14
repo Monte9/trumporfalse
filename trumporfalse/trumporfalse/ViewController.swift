@@ -12,6 +12,7 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     
+    
     struct Quote {
         var statement: String
         var valid: Bool
@@ -28,6 +29,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var streakLabel: UILabel!
     @IBOutlet weak var countdownTimer: UILabel!
     @IBOutlet weak var trumpImage_neg: UIImageView!
+    @IBOutlet weak var trueButton: UIButton!
+    @IBOutlet weak var falseButton: UIButton!
     
     
     
@@ -48,10 +51,30 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var index = 0
     
     var streak = 0
+ 
+    
+//    func applyBlurEffect(image: UIImage){
+//        var image : UIImage = UIImage(named:"usa_chicago_reflection_buildings_city_lights_58590_750x1334")!
+//        var imageToBlur = CIImage(image: image)
+//        var blurfilter = CIFilter(name: "CIGaussianBlur")
+//        blurfilter!.setValue(imageToBlur, forKey: "inputImage")
+//        var resultImage = blurfilter!.valueForKey("outputImage") as! CIImage
+//        var blurredImage = UIImage(CIImage: resultImage)
+//        self.blurImageView.image = blurredImage
+//        
+//    }
+//    
+    
+    
+//    var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+//    var blurEffectView = UIVisualEffectView(effect: blurEffect)
+//    blurEffectView.frame = view.bounds
+//    blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight] // for supporting device rotation
+//    view.addSubview(blurEffectView)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
         countdownTimer.text = "\(countdown)"
         
@@ -68,7 +91,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             registerDefaultSettings()
         }
         
-        play()
+        UIView.animateWithDuration(1.5, animations: {
+            self.play()
+            self.view.backgroundColor = UIColor.blackColor()
+        }) {
+            (true) in
+            self.playStatement()
+        }
+        
     }
     
     func play() {
@@ -125,28 +155,29 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         countdown -= 1
         
         if (countdown == 0) {
-            showLoseScreen()
+            timeLost()
         }
         
         countdownTimer.text = "\(countdown)"
     }
-    
-    @IBAction func choseFalse(sender: UIButton) {
-  
-        var quote = quotes[index]
 
+    @IBAction func choseFalse(sender: UIButton) {
+        
+        var quote = quotes[index]
+        
         if (quote?.valid)! {
             showLoseScreen()
         } else {
             showAnotherQuote()
         }
     }
-
+    
     @IBAction func choseTrue(sender: UIButton) {
         var quote = quotes[index]
-
+        
         if (quote?.valid)! {
             showAnotherQuote()
+            
         } else {
             showLoseScreen()
         }
@@ -154,18 +185,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     func showAnotherQuote(){
         UIView.animateWithDuration(1.5, animations: {
-            
+            self.trueButton.hidden = true
+            self.falseButton.hidden = true
             self.quoteBox.text = "CORRECT!"
             self.view.backgroundColor = UIColor.greenColor()
             self.myTimer!.invalidate()
             }) { (true) in
                 UIView.animateWithDuration(1.0, animations: {
-                    self.play()
+                    self.view.backgroundColor = UIColor.blackColor()
                     }, completion: { (true) in
                         self.index += 1
                         self.index = self.index % self.quotes.count
                         self.quoteBox.text = self.quotes[self.index]?.statement
-                        self.view.backgroundColor = UIColor.whiteColor()
+                        
+                    
+                        self.trueButton.hidden = false
+                        self.falseButton.hidden = false
                         //self.trumpImage_pos.hidden = false
                         
                         self.countdown = 10
@@ -176,8 +211,29 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         self.streakLabel.text = String(self.streak)
                         self.playStatement()
                 })
-        }
+        } 
         
+    }
+    
+    func timeLost() {
+        UIView.animateWithDuration(1.5, animations: {
+            self.quoteBox.text = "TIME'S UP!"
+            self.streak = 0
+            self.streakLabel.text = String(self.streak)
+            self.view.backgroundColor = UIColor.redColor()
+            self.myTimer!.invalidate()
+        }) { (true) in
+            UIView.animateWithDuration(2.0, animations: {
+                self.index = 1
+                self.view.backgroundColor = UIColor.whiteColor()
+                self.trumpImage_neg.hidden = false
+                }, completion: { (true) in
+                    let start_game_storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc: UIViewController = start_game_storyboard.instantiateViewControllerWithIdentifier("HomeNavigationController") as UIViewController
+                    self.presentViewController(vc, animated: true, completion: nil)
+            })
+        }
+
     }
     
     func showLoseScreen() {
