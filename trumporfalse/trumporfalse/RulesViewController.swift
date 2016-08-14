@@ -24,7 +24,9 @@ class RulesViewController: UIViewController {
     }
     
     @IBAction func dismissViewFromTapGesture(sender: UITapGestureRecognizer) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        let start_game_storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = start_game_storyboard.instantiateViewControllerWithIdentifier("HomeNavigationController") as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     /*
