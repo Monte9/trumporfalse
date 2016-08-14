@@ -19,8 +19,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="elephant-republican-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-f6-clV">
-                                <rect key="frame" x="0.0" y="0.0" width="512" height="512"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New-York-City-Wallpaper-For-Iphone-6" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-92-lHn">
+                                <rect key="frame" x="0.0" y="64" width="750" height="672"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1334" id="75D-YU-Lei"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="AVt-SR-qu2"/>
+                                    <constraint firstAttribute="width" constant="750" id="cVi-WX-XU7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elephant-republican-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-f6-clV">
+                                <rect key="frame" x="187" y="75" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BpP-IH-SwN"/>
+                                    <constraint firstAttribute="width" constant="40" id="if4-pI-GTU"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-Oe-mi3">
                                 <rect key="frame" x="82" y="243" width="250" height="250"/>
@@ -33,14 +45,6 @@
                                     <segue destination="BYZ-38-t0r" kind="push" id="9YH-Y4-7S2"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New-York-City-Wallpaper-For-Iphone-6" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-92-lHn">
-                                <rect key="frame" x="0.0" y="64" width="750" height="672"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1334" id="75D-YU-Lei"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="AVt-SR-qu2"/>
-                                    <constraint firstAttribute="width" constant="750" id="cVi-WX-XU7"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -49,10 +53,12 @@
                             <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="HS5-l2-ig4"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="JT1-X7-Fh0"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="Jrr-D7-WDf"/>
+                            <constraint firstItem="DLf-f6-clV" firstAttribute="top" secondItem="9sZ-jd-H9y" secondAttribute="top" constant="75" id="K0v-Wy-0D1"/>
                             <constraint firstAttribute="trailing" secondItem="xzg-92-lHn" secondAttribute="trailing" id="OpZ-LD-KKY"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="leading" secondItem="9sZ-jd-H9y" secondAttribute="leading" id="PjC-h0-evO"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="top" secondItem="6ff-AJ-NqJ" secondAttribute="bottom" id="eXG-V9-h2e"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="hxa-cj-2mV"/>
+                            <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="y5c-et-xU2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trump Or False" id="G93-8y-TaC"/>
