@@ -50,6 +50,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     
     var audioPlayer: AVAudioPlayer?
     
+    var beginningCount = 3
     var countdown = 10
     var myTimer: NSTimer? = nil
     
@@ -83,19 +84,34 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         speechSynthesizer.delegate = self
         
         countdownTimer.text = "\(countdown)"
-        
         streakLabel.text = String(streak)
+        quoteBox.text = ""
+        trueButton.hidden = true
+        falseButton.hidden = true
         
         quotes[0] = Quote(statement: "Donald Trump!", valid: false)
         quotes[1] = Quote(statement: "My IQ is one of the highest — and you all know it! Please don't feel so stupid or insecure; it's not your fault.", valid: true)
         quotes[2] = Quote(statement: "BOOM lol", valid: false)
         
-        quoteBox.text = quotes[index]?.statement
+        
         
         //Text-to-Speech settings
         if !loadSettings() {
             registerDefaultSettings()
         }
+        
+        
+        
+        //myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
+        
+        startGame()
+        
+    }
+    
+    func startGame() {
+        quoteBox.text = quotes[index]?.statement
+        trueButton.hidden = false
+        falseButton.hidden = false
         
         UIView.animateWithDuration(1.5, animations: {
             self.play()
@@ -104,10 +120,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             (true) in
             self.playStatement()
         }
-        
-        //while (speechSynthesizer.speaking){}
-        
-        
     }
 
     func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance) {
@@ -164,6 +176,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         return false
     }
 
+    func beginningCountdown() {
+        beginningCount -= 1
+        
+        if (beginningCount == 0) {
+            startGame()
+        }
+    }
     
     func updateCounter() {
         countdown -= 1
@@ -211,7 +230,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             self.falseButton.hidden = true
             self.correctMark.alpha = 1.0
             self.quoteBox.text = ""
-            self.myTimer!.invalidate()
+            if(self.myTimer != nil) {
+                self.myTimer!.invalidate()
+            }
             }) { (true) in
                 UIView.animateWithDuration(0.5, animations: {
                         self.correctMark.alpha = 0.00
@@ -258,7 +279,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             self.quoteBox.text = ""
             self.streak = 0
             self.streakLabel.text = String(self.streak)
-            self.myTimer!.invalidate()
+            if(self.myTimer != nil) {
+                self.myTimer!.invalidate()
+            }
+
         }) { (true) in
             UIView.animateWithDuration(2.0, animations: {
                 self.index = 1
@@ -287,7 +311,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             self.quoteBox.text = ""
             self.streak = 0
             self.streakLabel.text = String(self.streak)
-            self.myTimer!.invalidate()
+            if(self.myTimer != nil) {
+                self.myTimer!.invalidate()
+            }
         }) { (true) in
             UIView.animateWithDuration(0.5, animations: {
                 self.index = 1
