@@ -52,7 +52,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     var audioPlayer: AVAudioPlayer?
     
     var beginningCount = 3
-    var countdown = 10
+    var countdown = 5
     var myTimer: NSTimer? = nil
     
     var quotes = QuoteSource()
@@ -288,7 +288,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
                         //self.falseButton.hidden = false
                         //self.trumpImage_pos.hidden = false
                         self.quoteBox.backgroundColor = UIColor(red: 171/255.0, green: 155/255.0, blue: 106/255.0, alpha: 1.0)
-                        self.countdown = 10
+                        self.countdown = 5
                         self.countdownTimer.text = "\(self.countdown)"
                         self.streak += 1
                         self.storeHighestStreakCount()
