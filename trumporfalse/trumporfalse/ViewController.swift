@@ -38,6 +38,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     
     @IBOutlet weak var beginningCounter: UILabel!
     
+    @IBOutlet weak var newspaperPiece: UIImageView!
     
     
    // @IBOutlet weak var trumpImage_pos: UIImageView!
@@ -115,7 +116,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         self.quoteBox.backgroundColor = UIColor(white: 1, alpha: 0.5)
         
         beginningCounter.text = "\(beginningCount)"
-        play()
+        //play()
         
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
     }
@@ -137,19 +138,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         falseButton.hidden = false
     }
     
-    func play() {
-        do {
-            if let path = NSBundle.mainBundle().pathForResource("trumpAudio", ofType: "mp3") {
-                try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "mp3")
-                if let sound = audioPlayer {
-                    sound.prepareToPlay()
-                    sound.play()
-                }
-            }
-        } catch {
-            print("error initializing AVAudioPlayer")
-        }
-    }
+//    func play() {
+//        do {
+//            if let path = NSBundle.mainBundle().pathForResource("trumpAudio", ofType: "mp3") {
+//                try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "mp3")
+//                if let sound = audioPlayer {
+//                    sound.prepareToPlay()
+//                    sound.play()
+//                }
+//            }
+//        } catch {
+//            print("error initializing AVAudioPlayer")
+//        }
+//    }
 
     //delegate methods for the ArticleCellDelegate
     func playStatement() {
@@ -228,7 +229,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
         
         if (countdown <= 3) {
-            countdownTimer.textColor = UIColor.redColor()
+            countdownTimer.textColor = UIColor(red: 157/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
         }
         
         countdownTimer.text = "\(countdown)"

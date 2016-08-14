@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9sg-sB-Afg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9sg-sB-Afg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -106,7 +106,7 @@
                                     <constraint firstAttribute="width" constant="374" id="4U3-9o-jDI"/>
                                     <constraint firstAttribute="height" constant="150" id="gjb-av-KVG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-4O-rK8">
@@ -162,16 +162,6 @@
                                     <constraint firstAttribute="width" constant="300" id="yYu-sA-QZ2"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct-mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="ya1-an-Mk8">
-                                <rect key="frame" x="57" y="218" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="T3C-Aj-n66"/>
-                                    <constraint firstAttribute="height" constant="300" id="d5A-Qh-IHx"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alarm Clock-96" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-JF-Asg">
-                                <rect key="frame" x="159" y="320" width="96" height="96"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc4-NH-R1f">
                                 <rect key="frame" x="192" y="336" width="30.5" height="62.5"/>
                                 <attributedString key="attributedText">
@@ -189,7 +179,7 @@
                                 <rect key="frame" x="201" y="523" width="10" height="20"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpP-Wp-KlV">
-                                <rect key="frame" x="337.5" y="86" width="16.5" height="33"/>
+                                <rect key="frame" x="337" y="86" width="16.5" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -199,6 +189,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="829-8s-1Ti"/>
                                     <constraint firstAttribute="height" constant="30" id="sj8-Ev-jRG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alarm Clock-96" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-JF-Asg">
+                                <rect key="frame" x="159" y="320" width="96" height="96"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct-mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="ya1-an-Mk8">
+                                <rect key="frame" x="57" y="218" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="T3C-Aj-n66"/>
+                                    <constraint firstAttribute="height" constant="300" id="d5A-Qh-IHx"/>
                                 </constraints>
                             </imageView>
                         </subviews>
