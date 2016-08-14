@@ -266,7 +266,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(0.75, animations: {
-            self.play("yourereallysmart")
+            self.play("yourereallysmart (1)")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.correctMark.alpha = 1.0
@@ -308,7 +308,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(1.5, animations: {
-            self.play("stupid")
+            self.play("stupid1")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.view.backgroundColor = UIColor(red: 157/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
@@ -344,7 +344,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(1, animations: {
-            self.play("stupid")
+            self.play("stupid1")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.wrongMark.alpha = 1.0
