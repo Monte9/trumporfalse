@@ -4,7 +4,7 @@
 
 ## How to play Trump Or False:
 
-How well do you know our Republican Party nominee? Test your knowledge through Trump or False, a game in which you earn points for correctly identifying whether or not Trump said certain things! You have five seconds to classify each quote as true or false, and the game ends if you get an answer wrong, or run out of time. Good luck!
+How well do you know our Republican Party nominee? Test your knowledge through Trump or False, a game in which you earn points for correctly identifying whether or not Trump said certain things. You have five seconds to classify whether Trump actually said the quote (true) or he didn't (false). The game ends if you get an answer wrong, or run out of time. Good luck!
 
 ## Video Walkthrough
 
