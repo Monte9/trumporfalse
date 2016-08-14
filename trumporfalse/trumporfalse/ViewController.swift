@@ -136,9 +136,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         trueButton.hidden = false
         falseButton.hidden = false
     }
-<<<<<<< HEAD
-
-=======
     
     func play(s : String) {
         do {
@@ -155,7 +152,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             print("error initializing AVAudioPlayer")
         }
     }
->>>>>>> 368fbee99549dc18c143031afeeca5faa5823b8c
 
     //delegate methods for the ArticleCellDelegate
     func playStatement() {
