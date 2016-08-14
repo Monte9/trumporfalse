@@ -89,8 +89,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         trueButton.hidden = true
         falseButton.hidden = true
         
-
+<<<<<<< HEAD
+        quotes[0] = Quote(statement: "Donald Trump!", valid: false)
+        quotes[1] = Quote(statement: "My IQ is one of the highest — and you all know it! Please don't feel so stupid or insecure; it's not your fault.", valid: true)
+        quotes[2] = Quote(statement: "BOOM lol", valid: false)
         
+        
+=======
+        quoteBox.text = quotes.quotes[index]!.statement
+>>>>>>> 2240ab83792d096822e3072bae33e4a3cf323de2
         
         //Text-to-Speech settings
         if !loadSettings() {
@@ -106,7 +113,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     }
     
     func startGame() {
-        quoteBox.text = quotes.quotes[index]!.statement
+        quoteBox.text = quotes[index]?.statement
         trueButton.hidden = false
         falseButton.hidden = false
         
