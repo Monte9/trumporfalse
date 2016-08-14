@@ -174,6 +174,19 @@
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alarm Clock-96" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-JF-Asg">
                                 <rect key="frame" x="159" y="320" width="96" height="96"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc4-NH-R1f">
+                                <rect key="frame" x="138" y="331" width="138" height="73"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="3">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="54" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -208,6 +221,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Trump Or False" id="HVR-Ox-htM"/>
                     <connections>
+                        <outlet property="beginningCounter" destination="uc4-NH-R1f" id="FPx-Y6-TmD"/>
                         <outlet property="correctMark" destination="ya1-an-Mk8" id="g2X-mo-gIb"/>
                         <outlet property="countdownTimer" destination="MpP-Wp-KlV" id="SXV-Dp-CiJ"/>
                         <outlet property="falseButton" destination="8dD-oV-uBY" id="b2H-wy-8yu"/>

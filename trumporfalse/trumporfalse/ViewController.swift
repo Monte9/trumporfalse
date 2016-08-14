@@ -36,6 +36,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     
     @IBOutlet weak var timeUpClock: UIImageView!
     
+    @IBOutlet weak var beginningCounter: UILabel!
     
     
     
@@ -98,10 +99,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
         
         
+        beginningCounter.text = "\(beginningCount)"
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
         
-        //myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
-        
-        startGame()
         
     }
     
@@ -175,9 +175,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
 
     func beginningCountdown() {
         beginningCount -= 1
+        beginningCounter.text = "\(beginningCount)"
         
         if (beginningCount == 0) {
-            startGame()
+            beginningCounter.alpha = 0
+            beginningCounter.text = "Go!"
+            UIView.animateWithDuration(0.8, animations: {
+                self.beginningCounter.alpha = 1.0
+            }) {
+                (true) in
+                self.beginningCounter.hidden = true
+                self.startGame()
+            }
+            
         }
     }
     
@@ -186,6 +196,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         
         if (countdown == 0) {
             timeLost()
+        }
+        
+        if (countdown <= 3) {
+            countdownTimer.textColor = UIColor.redColor()
         }
         
         countdownTimer.text = "\(countdown)"
@@ -216,6 +230,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     func showAnotherQuote(){
         correctMark.alpha = 0
         correctMark.hidden = false
+        countdownTimer.textColor = UIColor.blackColor()
         
         if (speechSynthesizer.speaking) {
             speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
