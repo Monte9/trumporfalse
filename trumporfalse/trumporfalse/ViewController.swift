@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Realm
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
@@ -112,16 +111,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 //
     
     func play() {
-        
-        print("GETTING IT NOW>..")
-        var filePath = NSBundle.mainBundle().pathForResource("trumpAudio", ofType:"m4a")
-       // var beepPlayer = AVAudioPlayer()
-
-        print(filePath)
-
-//        beepPlayer = AVAudioPlayer(contentsOfURL: beepSoundURL)
-//        beepPlayer.prepareToPlay()
-//        beepPlayer.play()
+        if let path = NSBundle.mainBundle().pathForResource("mysound", ofType: "aiff") {
+            audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "aiff", error: nil)
+            
+            if let sound = audioPlayer {
+                sound.prepareToPlay()
+                sound.play()
+            }
+        }
     }
     
     
