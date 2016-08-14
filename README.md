@@ -2,9 +2,11 @@
 
 **Trump Or False** is an iOS app created at OS Hacks @Github.
 
+
 ## How to play Trump Or False:
 
 How well do you know our Republican Party nominee? Test your knowledge through Trump or False, a game in which you earn points for correctly identifying whether or not Trump said certain things. You have five seconds to classify whether Trump actually said the quote (true) or he didn't (false). The game ends if you get an answer wrong, or run out of time. Good luck!
+
 
 ## Video Walkthrough
 
@@ -21,6 +23,9 @@ Here's a working demo of the app:
 4. [Monte Thakkar](https://github.com/monte9)
 5. [Thomas Clavelli](https://github.com/tjclavel)
 
+## Devpost Submission
+
+[Trump or False](http://devpost.com/software/trump-or-false)
 
 ## License
 
