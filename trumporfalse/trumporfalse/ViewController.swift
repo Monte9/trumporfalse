@@ -90,13 +90,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         trueButton.hidden = true
         falseButton.hidden = true
         
-
-        
-        
         //Text-to-Speech settings
         if !loadSettings() {
             registerDefaultSettings()
         }
+        
+        //Customize the navigation bar title and color
+        let navigationBar = self.navigationController?.navigationBar
+        
+        //make navigation bar transparent
+        navigationBar!.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationBar!.shadowImage = UIImage()
+        navigationBar!.translucent = true
+        
+        //set navigation bar title with color
+        navigationItem.title = "Current High Score: 10"
+        navigationBar!.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.blackColor()]
         
         
         beginningCounter.text = "\(beginningCount)"

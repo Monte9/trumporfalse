@@ -40,29 +40,39 @@
                                     <segue destination="Qs7-lI-2yA" kind="modal" id="NlZ-8D-fdT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button above to start the game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-yj-oem">
+                                <rect key="frame" x="20" y="637" width="374" height="91"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="One Finger-100" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-LE-pdh">
-                                <rect key="frame" x="134" y="521" width="146" height="118"/>
+                                <rect key="frame" x="187" y="537" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="60T-WU-qEC"/>
-                                    <constraint firstAttribute="height" constant="118" id="kKC-2H-qup"/>
+                                    <constraint firstAttribute="height" constant="100" id="0mJ-2V-w7E"/>
+                                    <constraint firstAttribute="width" constant="100" id="lzv-lt-zyO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="3ha-Hm-cL1"/>
+                            <constraint firstItem="oVF-LE-pdh" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" constant="30" id="4k1-wu-LYa"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="leading" secondItem="9sZ-jd-H9y" secondAttribute="leading" id="4yJ-m1-xwW"/>
                             <constraint firstItem="ts7-3p-j7C" firstAttribute="top" secondItem="xzg-92-lHn" secondAttribute="bottom" id="ARO-jK-gWn"/>
                             <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="HS5-l2-ig4"/>
-                            <constraint firstItem="oVF-LE-pdh" firstAttribute="leading" secondItem="9sZ-jd-H9y" secondAttribute="leadingMargin" constant="114" id="IxX-vA-v4h"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="JT1-X7-Fh0"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="Jrr-D7-WDf"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="top" secondItem="6ff-AJ-NqJ" secondAttribute="bottom" constant="-64" id="Jw8-wR-0Iu"/>
                             <constraint firstItem="DLf-f6-clV" firstAttribute="top" secondItem="9sZ-jd-H9y" secondAttribute="top" constant="75" id="K0v-Wy-0D1"/>
-                            <constraint firstItem="ts7-3p-j7C" firstAttribute="top" secondItem="oVF-LE-pdh" secondAttribute="bottom" constant="97" id="dbc-yA-Pus"/>
+                            <constraint firstItem="OYQ-yj-oem" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="N3T-Rx-HWm"/>
+                            <constraint firstItem="oVF-LE-pdh" firstAttribute="top" secondItem="hrV-Oe-mi3" secondAttribute="bottom" constant="44" id="OCU-ss-XSk"/>
+                            <constraint firstAttribute="trailing" secondItem="OYQ-yj-oem" secondAttribute="trailing" constant="20" id="SGl-pM-gjM"/>
+                            <constraint firstItem="OYQ-yj-oem" firstAttribute="top" relation="lessThanOrEqual" secondItem="oVF-LE-pdh" secondAttribute="bottom" priority="750" id="V9K-Nr-HbL"/>
+                            <constraint firstItem="ts7-3p-j7C" firstAttribute="top" secondItem="OYQ-yj-oem" secondAttribute="bottom" constant="8" id="Wqe-uK-n2U"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="hxa-cj-2mV"/>
+                            <constraint firstItem="OYQ-yj-oem" firstAttribute="leading" secondItem="9sZ-jd-H9y" secondAttribute="leading" constant="20" id="kI6-gm-x7l"/>
                             <constraint firstAttribute="trailing" secondItem="xzg-92-lHn" secondAttribute="trailing" id="tYD-Kb-rPS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oVF-LE-pdh" secondAttribute="trailing" constant="114" id="ud4-HE-d5G"/>
                             <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="y5c-et-xU2"/>
                         </constraints>
                     </view>
