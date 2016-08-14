@@ -34,6 +34,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var correctMark: UIImageView!
     @IBOutlet weak var wrongMark: UIImageView!
     
+    @IBOutlet weak var timeUpClock: UIImageView!
+    
+    
+    
     
    // @IBOutlet weak var trumpImage_pos: UIImageView!
     
@@ -232,13 +236,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
 
         UIView.animateWithDuration(1.5, animations: {
-            self.quoteBox.text = "TIME'S UP!"
+            self.trueButton.hidden = true
+            self.falseButton.hidden = true
+            self.view.backgroundColor = UIColor(red: 157/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+            self.timeUpClock.hidden = false
+            self.quoteBox.text = ""
             self.streak = 0
             self.streakLabel.text = String(self.streak)
-            self.view.backgroundColor = UIColor.redColor()
             self.myTimer!.invalidate()
         }) { (true) in
-            UIView.animateWithDuration(4.0, animations: {
+            UIView.animateWithDuration(2.0, animations: {
                 self.index = 1
                 self.view.backgroundColor = UIColor.whiteColor()
                 }, completion: { (true) in
