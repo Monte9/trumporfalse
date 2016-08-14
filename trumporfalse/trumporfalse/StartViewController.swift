@@ -45,15 +45,16 @@ class StartViewController: UIViewController {
         fingerPoint.alpha = 1;
         UIView.animateWithDuration(1.5, animations: {
             var newCenter = self.fingerPoint.center
-            newCenter.y -= 130
-            self.fingerPoint.center = newCenter
+            var newPoint = CGPoint(x: newCenter.x, y: newCenter.y - 130)
+            self.fingerPoint.center = newPoint
         }) {
             (true) in
             UIView.animateWithDuration(0.5, animations: {
                 self.fingerPoint.alpha = 0
             }) {
                 (true) in
-                self.fingerPoint.center.y += 130
+                var newPoint = CGPoint(x: self.fingerPoint.center.x, y: self.fingerPoint.center.y + 130)
+                self.fingerPoint.center = newPoint
                 self.fingerPoint.hidden = true
             }
         }

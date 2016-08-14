@@ -40,17 +40,17 @@
                                     <segue destination="Qs7-lI-2yA" kind="modal" id="NlZ-8D-fdT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button above to start the game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-yj-oem">
-                                <rect key="frame" x="20" y="637" width="374" height="91"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press the button to start the game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-yj-oem">
+                                <rect key="frame" x="18" y="637" width="379" height="91"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="One Finger-100" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-LE-pdh">
-                                <rect key="frame" x="187" y="537" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="One Finger-100" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-LE-pdh">
+                                <rect key="frame" x="187" y="537" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="0mJ-2V-w7E"/>
-                                    <constraint firstAttribute="width" constant="100" id="lzv-lt-zyO"/>
+                                    <constraint firstAttribute="height" constant="80" id="AZR-ro-oaP"/>
+                                    <constraint firstAttribute="width" constant="80" id="ZMt-0c-gfg"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -112,7 +112,7 @@
                                     <constraint firstAttribute="width" constant="374" id="4U3-9o-jDI"/>
                                     <constraint firstAttribute="height" constant="150" id="gjb-av-KVG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-4O-rK8">
@@ -168,16 +168,6 @@
                                     <constraint firstAttribute="width" constant="300" id="yYu-sA-QZ2"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct-mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="ya1-an-Mk8">
-                                <rect key="frame" x="57" y="218" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="T3C-Aj-n66"/>
-                                    <constraint firstAttribute="height" constant="300" id="d5A-Qh-IHx"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alarm Clock-96" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-JF-Asg">
-                                <rect key="frame" x="159" y="320" width="96" height="96"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc4-NH-R1f">
                                 <rect key="frame" x="174" y="299" width="67" height="138"/>
                                 <attributedString key="attributedText">
@@ -194,8 +184,8 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-xI-AjC">
                                 <rect key="frame" x="201" y="523" width="10" height="20"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpP-Wp-KlV">
-                                <rect key="frame" x="338" y="86" width="16" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpP-Wp-KlV">
+                                <rect key="frame" x="337" y="86" width="16.5" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -205,6 +195,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="829-8s-1Ti"/>
                                     <constraint firstAttribute="height" constant="30" id="sj8-Ev-jRG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alarm Clock-96" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-JF-Asg">
+                                <rect key="frame" x="159" y="320" width="96" height="96"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct-mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="ya1-an-Mk8">
+                                <rect key="frame" x="57" y="218" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="T3C-Aj-n66"/>
+                                    <constraint firstAttribute="height" constant="300" id="d5A-Qh-IHx"/>
                                 </constraints>
                             </imageView>
                         </subviews>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1839F3C31D60EE5000B1F0A0 /* No-News-Today-Picture1 (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1839F3C21D60EE5000B1F0A0 /* No-News-Today-Picture1 (1).jpg */; };
 		187C50861D6075F500649516 /* Stopwatch-104.png in Resources */ = {isa = PBXBuildFile; fileRef = 187C50851D6075F500649516 /* Stopwatch-104.png */; };
 		187C50891D6088BC00649516 /* correct-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 187C50871D6088BC00649516 /* correct-mark.png */; };
 		187C508A1D6088BC00649516 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 187C50881D6088BC00649516 /* icon.png */; };
@@ -15,6 +16,8 @@
 		D03D90DF1D60A85200B35A86 /* One Finger-100.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D90DE1D60A85200B35A86 /* One Finger-100.png */; };
 		D0C0DAB01D60AA7F0080154F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0DAAF1D60AA7F0080154F /* StartViewController.swift */; };
 		EC1F54691D60E9EC0045F636 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F54681D60E9EC0045F636 /* RulesViewController.swift */; };
+		EC1F546B1D60F0380045F636 /* stupid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC1F546A1D60F0380045F636 /* stupid.mp3 */; };
+		EC1F546F1D60F10D0045F636 /* yourereallysmart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC1F546E1D60F10D0045F636 /* yourereallysmart.mp3 */; };
 		EC4B01721D5FC95A007FCBCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */; };
 		EC4B01741D5FC95A007FCBCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01731D5FC95A007FCBCF /* ViewController.swift */; };
 		EC4B01771D5FC95A007FCBCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4B01751D5FC95A007FCBCF /* Main.storyboard */; };
@@ -24,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1839F3C21D60EE5000B1F0A0 /* No-News-Today-Picture1 (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "No-News-Today-Picture1 (1).jpg"; sourceTree = "<group>"; };
 		187C50851D6075F500649516 /* Stopwatch-104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stopwatch-104.png"; sourceTree = "<group>"; };
 		187C50871D6088BC00649516 /* correct-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "correct-mark.png"; sourceTree = "<group>"; };
 		187C50881D6088BC00649516 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 		D03D90DE1D60A85200B35A86 /* One Finger-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "One Finger-100.png"; sourceTree = "<group>"; };
 		D0C0DAAF1D60AA7F0080154F /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		EC1F54681D60E9EC0045F636 /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		EC1F546A1D60F0380045F636 /* stupid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stupid.mp3; sourceTree = "<group>"; };
+		EC1F546E1D60F10D0045F636 /* yourereallysmart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yourereallysmart.mp3; sourceTree = "<group>"; };
 		EC4B016E1D5FC95A007FCBCF /* trumporfalse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trumporfalse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC4B01731D5FC95A007FCBCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +107,10 @@
 				EC4B01751D5FC95A007FCBCF /* Main.storyboard */,
 				D0C0DAAF1D60AA7F0080154F /* StartViewController.swift */,
 				EC4B018B1D603274007FCBCF /* trumpAudio.mp3 */,
+				EC1F546E1D60F10D0045F636 /* yourereallysmart.mp3 */,
+				EC1F546A1D60F0380045F636 /* stupid.mp3 */,
 				EC4B01781D5FC95A007FCBCF /* Assets.xcassets */,
+				1839F3C21D60EE5000B1F0A0 /* No-News-Today-Picture1 (1).jpg */,
 				D03D90DE1D60A85200B35A86 /* One Finger-100.png */,
 				187C50871D6088BC00649516 /* correct-mark.png */,
 				187C50881D6088BC00649516 /* icon.png */,
@@ -177,7 +186,10 @@
 				D03D90DF1D60A85200B35A86 /* One Finger-100.png in Resources */,
 				187C50861D6075F500649516 /* Stopwatch-104.png in Resources */,
 				187C508A1D6088BC00649516 /* icon.png in Resources */,
+				1839F3C31D60EE5000B1F0A0 /* No-News-Today-Picture1 (1).jpg in Resources */,
 				EC4B017C1D5FC95A007FCBCF /* LaunchScreen.storyboard in Resources */,
+				EC1F546F1D60F10D0045F636 /* yourereallysmart.mp3 in Resources */,
+				EC1F546B1D60F0380045F636 /* stupid.mp3 in Resources */,
 				EC4B01791D5FC95A007FCBCF /* Assets.xcassets in Resources */,
 				187C50891D6088BC00649516 /* correct-mark.png in Resources */,
 				EC4B018C1D603274007FCBCF /* trumpAudio.mp3 in Resources */,
