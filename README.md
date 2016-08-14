@@ -10,9 +10,7 @@ How well do you know our Republican Party nominee? Test your knowledge through T
 
 Here's a working demo of the app:
 
-*coming soon*
-
-![tyypps walkthrough](tyypps.gif)
+![Trump Or False walkthrough](trump.gif)
 
 
 ## Team Members
