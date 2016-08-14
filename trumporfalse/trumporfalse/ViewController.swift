@@ -10,13 +10,14 @@
 import UIKit
 import AVFoundation
 
+
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     
-    struct Quote {
-        var statement: String
-        var valid: Bool
-    }
+//    struct Quote {
+//        var statement: String
+//        var valid: Bool
+//    }
     
     //Store state of the speech Uterrance for pause/play functionality
     struct TextToSpeech {
@@ -48,7 +49,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var countdown = 10
     var myTimer: NSTimer? = nil
     
-    var quotes = [Int: Quote]()
+    var quotes = QuoteSource()
     var index = 0
     
     var streak = 0
@@ -81,11 +82,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         streakLabel.text = String(streak)
         
-        quotes[0] = Quote(statement: "Donald Trump!", valid: false)
-        quotes[1] = Quote(statement: "My IQ is one of the highest — and you all know it! Please don't feel so stupid or insecure; it's not your fault.", valid: true)
-        quotes[2] = Quote(statement: "BOOM lol", valid: false)
-        
-        quoteBox.text = quotes[index]?.statement
+        quoteBox.text = quotes.quotes[index]!.statement
         
         //Text-to-Speech settings
         if !loadSettings() {
@@ -119,9 +116,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //delegate methods for the ArticleCellDelegate
     func playStatement() {
         
-        let text = quotes[index]?.statement
+        let text = quotes.quotes[index]!.statement
         
-        let speechUtterance = AVSpeechUtterance(string: text!)
+        let speechUtterance = AVSpeechUtterance(string: text)
         speechUtterance.rate = rate
         speechUtterance.pitchMultiplier = pitch
         speechUtterance.volume = volume
@@ -164,9 +161,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBAction func choseFalse(sender: UIButton) {
         
-        var quote = quotes[index]
+        let quote = quotes.quotes[index]!
         
-        if (quote?.valid)! {
+        if (quote.isvalid) {
             showLoseScreen()
         } else {
             showAnotherQuote()
@@ -174,9 +171,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func choseTrue(sender: UIButton) {
-        var quote = quotes[index]
-        
-        if (quote?.valid)! {
+        let quote = quotes.quotes[index]!
+        if (quote.isvalid) {
             showAnotherQuote()
             
         } else {
@@ -206,9 +202,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                        
                         self.correctMark.hidden = true
                         self.index += 1
-                        self.index = self.index % self.quotes.count
-                        self.quoteBox.text = self.quotes[self.index]?.statement
-                        
+                        self.index = self.index % self.quotes.numEntries
+                        self.quoteBox.text = self.quotes.quotes[self.index]!.statement
                     
                         self.trueButton.hidden = false
                         self.falseButton.hidden = false
