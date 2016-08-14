@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Jer-v1-CNe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -35,7 +36,7 @@
             </objects>
             <point key="canvasLocation" x="-112" y="693"/>
         </scene>
-        <!--View Controller-->
+        <!--Trump Or False-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="trumporfalse" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,51 +48,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pff-m7-rJW">
-                                <rect key="frame" x="50" y="368" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pff-m7-rJW">
+                                <rect key="frame" x="76" y="448" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="aKf-Q9-vNV"/>
+                                    <constraint firstAttribute="height" constant="60" id="dmy-J0-1xO"/>
+                                </constraints>
                                 <state key="normal" image="CorrectAnswerImage"/>
                                 <connections>
                                     <action selector="choseTrue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vz-hC-Joh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSE-P3-Efu">
-                                <rect key="frame" x="190" y="368" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSE-P3-Efu">
+                                <rect key="frame" x="184" y="448" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="eLD-Iy-Dwr"/>
+                                    <constraint firstAttribute="width" constant="60" id="uf6-0w-bQ7"/>
+                                </constraints>
                                 <state key="normal" image="IncorrectAnswerImage"/>
                                 <connections>
                                     <action selector="choseFalse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7iC-Td-7Zq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjh-5J-kWC">
-                                <rect key="frame" x="20" y="142" width="285" height="153"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjh-5J-kWC">
+                                <rect key="frame" x="8" y="243" width="304" height="81.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">"Ariana Huffington is unattractive, both inside and out. I fully understand why her former husband left her for a man - he made a good decision."</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpP-Wp-KlV">
-                                <rect key="frame" x="38" y="51" width="54" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-4O-rK8">
+                                <rect key="frame" x="20" y="104" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Streak:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-4O-rK8">
-                                <rect key="frame" x="38" y="508" width="86" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXl-0V-fpS">
+                                <rect key="frame" x="246" y="75" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Streak:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRS-rQ-Uwp">
+                                <rect key="frame" x="20" y="75.5" width="54" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpP-Wp-KlV">
+                                <rect key="frame" x="282" y="104" width="18" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trump" translatesAutoresizingMaskIntoConstraints="NO" id="nJt-Ov-A7Z">
+                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="UJv-XW-YRU"/>
+                                    <constraint firstAttribute="height" constant="320" id="hXJ-Ph-pEn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99321930810000003" blue="0.96765711190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZSE-P3-Efu" secondAttribute="bottom" constant="60" id="0Bm-k8-17k"/>
+                            <constraint firstAttribute="trailing" secondItem="MpP-Wp-KlV" secondAttribute="trailing" constant="20" id="1UF-YN-UeZ"/>
+                            <constraint firstItem="sjh-5J-kWC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2b4-CV-hfp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZSE-P3-Efu" secondAttribute="trailing" constant="60" id="729-cj-n80"/>
+                            <constraint firstItem="sjh-5J-kWC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="9jU-da-B8a"/>
+                            <constraint firstItem="MpP-Wp-KlV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Omy-If-JSf"/>
+                            <constraint firstItem="l5V-4O-rK8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="VM2-e4-tf6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pff-m7-rJW" secondAttribute="bottom" constant="60" id="arV-1y-Ocj"/>
+                            <constraint firstAttribute="trailing" secondItem="sjh-5J-kWC" secondAttribute="trailing" constant="8" id="awH-vq-6pV"/>
+                            <constraint firstItem="pff-m7-rJW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="e64-Sk-L6f"/>
+                            <constraint firstItem="nJt-Ov-A7Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ivR-0V-7Gw"/>
+                            <constraint firstItem="nJt-Ov-A7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ivU-MU-80k"/>
+                            <constraint firstItem="sjh-5J-kWC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wti-aL-F40"/>
+                            <constraint firstItem="l5V-4O-rK8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zyh-Co-0Bx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Trump Or False" id="HVR-Ox-htM"/>
                     <connections>
                         <outlet property="countdownTimer" destination="MpP-Wp-KlV" id="SXV-Dp-CiJ"/>
                         <outlet property="quoteBox" destination="sjh-5J-kWC" id="JmW-fV-mz1"/>
                         <outlet property="streakLabel" destination="l5V-4O-rK8" id="w1w-ro-Raj"/>
+                        <outlet property="trumpImage" destination="nJt-Ov-A7Z" id="dUJ-0T-5gF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="700"/>
+            <point key="canvasLocation" x="836" y="706"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="t9R-xd-wLA">
@@ -121,17 +167,37 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99321930810000003" blue="0.96765711190000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oC2-Fq-D0x"/>
                     <connections>
                         <outlet property="resultLabel" destination="SyC-co-iwE" id="FbT-jZ-xtG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82E-Bk-Ukg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="699" y="700"/>
+            <point key="canvasLocation" x="1231" y="719"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W42-V9-P3S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jer-v1-CNe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ivd-KJ-wsk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L75-Ls-UdL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVd-hk-P3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="706"/>
         </scene>
     </scenes>
     <resources>
         <image name="CorrectAnswerImage" width="528" height="528"/>
         <image name="IncorrectAnswerImage" width="528" height="528"/>
+        <image name="trump" width="1707" height="2331"/>
     </resources>
 </document>

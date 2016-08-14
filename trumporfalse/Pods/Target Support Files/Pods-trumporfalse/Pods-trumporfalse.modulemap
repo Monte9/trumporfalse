@@ -1,0 +1,6 @@
+framework module Pods_trumporfalse {
+  umbrella header "Pods-trumporfalse-umbrella.h"
+
+  export *
+  module * { export * }
+}

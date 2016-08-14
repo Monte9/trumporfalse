@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29BB81CA390A44CACF278430 /* Pods_trumporfalse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBB5278259F96D316F71174 /* Pods_trumporfalse.framework */; };
 		A6E752351D5FE3280035CD20 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E752341D5FE3280035CD20 /* ResultViewController.swift */; };
 		EC4B01721D5FC95A007FCBCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */; };
 		EC4B01741D5FC95A007FCBCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01731D5FC95A007FCBCF /* ViewController.swift */; };
 		EC4B01771D5FC95A007FCBCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4B01751D5FC95A007FCBCF /* Main.storyboard */; };
 		EC4B01791D5FC95A007FCBCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4B01781D5FC95A007FCBCF /* Assets.xcassets */; };
 		EC4B017C1D5FC95A007FCBCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4B017A1D5FC95A007FCBCF /* LaunchScreen.storyboard */; };
+		EC4B01841D5FF931007FCBCF /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01831D5FF931007FCBCF /* Quote.swift */; };
+		EC4B01861D5FFE03007FCBCF /* Trump.csv in Resources */ = {isa = PBXBuildFile; fileRef = EC4B01851D5FFE03007FCBCF /* Trump.csv */; };
+		EC4B01881D5FFEFA007FCBCF /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC4B01871D5FFEFA007FCBCF /* hello.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EBB5278259F96D316F71174 /* Pods_trumporfalse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trumporfalse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6AEA989A97862889440226 /* Pods-trumporfalse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trumporfalse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trumporfalse/Pods-trumporfalse.debug.xcconfig"; sourceTree = "<group>"; };
 		A6E752341D5FE3280035CD20 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		EC4B016E1D5FC95A007FCBCF /* trumporfalse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trumporfalse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		EC4B01781D5FC95A007FCBCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC4B017B1D5FC95A007FCBCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC4B017D1D5FC95A007FCBCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC4B01831D5FF931007FCBCF /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		EC4B01851D5FFE03007FCBCF /* Trump.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Trump.csv; sourceTree = "<group>"; };
+		EC4B01871D5FFEFA007FCBCF /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
+		ED153DA385A429BA00EB386A /* Pods-trumporfalse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trumporfalse.release.xcconfig"; path = "Pods/Target Support Files/Pods-trumporfalse/Pods-trumporfalse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BB81CA390A44CACF278430 /* Pods_trumporfalse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592CEFCB90EAA9B7757C4148 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EBB5278259F96D316F71174 /* Pods_trumporfalse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82FEF251DF9F1322F5C23AB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AEA989A97862889440226 /* Pods-trumporfalse.debug.xcconfig */,
+				ED153DA385A429BA00EB386A /* Pods-trumporfalse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC4B01651D5FC95A007FCBCF = {
 			isa = PBXGroup;
 			children = (
 				EC4B01701D5FC95A007FCBCF /* trumporfalse */,
 				EC4B016F1D5FC95A007FCBCF /* Products */,
+				82FEF251DF9F1322F5C23AB1 /* Pods */,
+				592CEFCB90EAA9B7757C4148 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +89,10 @@
 				A6E752341D5FE3280035CD20 /* ResultViewController.swift */,
 				EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */,
 				EC4B01731D5FC95A007FCBCF /* ViewController.swift */,
+				EC4B01831D5FF931007FCBCF /* Quote.swift */,
 				EC4B01751D5FC95A007FCBCF /* Main.storyboard */,
+				EC4B01851D5FFE03007FCBCF /* Trump.csv */,
+				EC4B01871D5FFEFA007FCBCF /* hello.txt */,
 				EC4B01781D5FC95A007FCBCF /* Assets.xcassets */,
 				EC4B017A1D5FC95A007FCBCF /* LaunchScreen.storyboard */,
 				EC4B017D1D5FC95A007FCBCF /* Info.plist */,
@@ -74,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC4B01801D5FC95A007FCBCF /* Build configuration list for PBXNativeTarget "trumporfalse" */;
 			buildPhases = (
+				2D2C94A6ED86E8E8C421AA36 /* [CP] Check Pods Manifest.lock */,
 				EC4B016A1D5FC95A007FCBCF /* Sources */,
 				EC4B016B1D5FC95A007FCBCF /* Frameworks */,
 				EC4B016C1D5FC95A007FCBCF /* Resources */,
+				A8BBE1702D3BC58145BF2076 /* [CP] Embed Pods Frameworks */,
+				1E6331113B775B571D0AF6DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,16 +164,67 @@
 				EC4B017C1D5FC95A007FCBCF /* LaunchScreen.storyboard in Resources */,
 				EC4B01791D5FC95A007FCBCF /* Assets.xcassets in Resources */,
 				EC4B01771D5FC95A007FCBCF /* Main.storyboard in Resources */,
+				EC4B01861D5FFE03007FCBCF /* Trump.csv in Resources */,
+				EC4B01881D5FFEFA007FCBCF /* hello.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E6331113B775B571D0AF6DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trumporfalse/Pods-trumporfalse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D2C94A6ED86E8E8C421AA36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8BBE1702D3BC58145BF2076 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trumporfalse/Pods-trumporfalse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC4B016A1D5FC95A007FCBCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4B01841D5FF931007FCBCF /* Quote.swift in Sources */,
 				EC4B01741D5FC95A007FCBCF /* ViewController.swift in Sources */,
 				EC4B01721D5FC95A007FCBCF /* AppDelegate.swift in Sources */,
 				A6E752351D5FE3280035CD20 /* ResultViewController.swift in Sources */,
@@ -253,6 +340,7 @@
 		};
 		EC4B01811D5FC95A007FCBCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D6AEA989A97862889440226 /* Pods-trumporfalse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = trumporfalse/Info.plist;
@@ -264,6 +352,7 @@
 		};
 		EC4B01821D5FC95A007FCBCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED153DA385A429BA00EB386A /* Pods-trumporfalse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = trumporfalse/Info.plist;
