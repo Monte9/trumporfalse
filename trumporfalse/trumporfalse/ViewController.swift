@@ -107,9 +107,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         navigationBar!.translucent = true
         
         //set navigation bar title with color
-        navigationItem.title = "Current High Score: \(Int(highestStreak!))"
+        navigationItem.title = "High Score: \(Int(highestStreak!))"
         navigationBar!.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.blackColor()]
-        
         
         beginningCounter.text = "\(beginningCount)"
         play()
@@ -183,8 +182,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     }
     
     func storeHighestStreakCount() {
-        print("Current \(streak)")
-        print("HIGH: \(highestStreak)")
         if (streak > highestStreak) {
             let prefs = NSUserDefaults.standardUserDefaults()
             prefs.setValue(streak, forKey: "high")
@@ -195,8 +192,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     func getHighestStreakCount() {
         let prefs = NSUserDefaults.standardUserDefaults()
         let value = prefs.integerForKey("high")
-        print("GIT THIS: \(value)")
         highestStreak = value
+        navigationItem.title = "New High Score: \(Int(highestStreak!))"
     }
 
     func beginningCountdown() {
@@ -287,6 +284,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
                         self.countdown = 10
                         self.countdownTimer.text = "\(self.countdown)"
                         self.streak += 1
+                        self.storeHighestStreakCount()
                         self.streakLabel.text = String(self.streak)
                         
                         self.playStatement()
@@ -349,7 +347,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }) { (true) in
             UIView.animateWithDuration(0.5, animations: {
                 self.index = 1
-                print(self.wrongMark.alpha)
                 self.wrongMark.alpha = 0.0
                 }, completion: { (true) in
                     self.wrongMark.hidden = true
