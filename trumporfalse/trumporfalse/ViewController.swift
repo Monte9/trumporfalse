@@ -136,7 +136,26 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         trueButton.hidden = false
         falseButton.hidden = false
     }
+<<<<<<< HEAD
 
+=======
+    
+    func play(s : String) {
+        do {
+            if let path = NSBundle.mainBundle().pathForResource(s, ofType: "mp3") {
+                try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "mp3")
+                print(path)
+                if let sound = audioPlayer {
+                    sound.prepareToPlay()
+                    print("playing path now..")
+                    sound.play()
+                }
+            }
+        } catch {
+            print("error initializing AVAudioPlayer")
+        }
+    }
+>>>>>>> 368fbee99549dc18c143031afeeca5faa5823b8c
 
     //delegate methods for the ArticleCellDelegate
     func playStatement() {
@@ -253,7 +272,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(0.75, animations: {
-            self.play("yourereallysmart (1)")
+            self.play("yourereallysmart")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.correctMark.alpha = 1.0
@@ -295,7 +314,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(1.5, animations: {
-            self.play("stupid1")
+            self.play("stupid")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.view.backgroundColor = UIColor(red: 157/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
@@ -331,7 +350,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         }
 
         UIView.animateWithDuration(1, animations: {
-            self.play("stupid1")
+            self.play("stupid")
             self.trueButton.hidden = true
             self.falseButton.hidden = true
             self.wrongMark.alpha = 1.0
