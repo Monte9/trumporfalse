@@ -79,7 +79,6 @@ class QuoteSource: NSObject {
         addEntry("It is not truth that matters, but victory.", isvalid: false)
         addEntry("I do not see why man should not be just as cruel as nature.", isvalid: false)
         
-        
         randomizeSource()
     }
     

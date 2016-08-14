@@ -35,6 +35,7 @@ class StartViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        animateFinger()
         myTimer = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector:"animateFinger", userInfo: nil, repeats: true)
         
     }
