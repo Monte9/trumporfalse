@@ -21,6 +21,18 @@ class StartViewController: UIViewController {
         // Do any additional setup after loading the view.
         origCenter = fingerPoint.center
         
+        //Customize the navigation bar title and color
+        let navigationBar = self.navigationController?.navigationBar
+        
+        //make navigation bar transparent
+        navigationBar!.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationBar!.shadowImage = UIImage()
+        navigationBar!.translucent = true
+        
+        //set navigation bar title with color
+        navigationItem.title = "Trump Or False"
+        navigationBar!.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.blackColor()]
+
     }
     
     override func viewDidAppear(animated: Bool) {

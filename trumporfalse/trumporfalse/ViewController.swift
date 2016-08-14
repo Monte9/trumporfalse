@@ -100,17 +100,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         
         
         beginningCounter.text = "\(beginningCount)"
+        play()
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
-        
         
     }
     
     func startGame() {
         quoteBox.text = quotes.quotes[index]!.statement
         
-        
         UIView.animateWithDuration(1.5, animations: {
-            self.play()
             self.view.backgroundColor = UIColor.whiteColor()
         }) {
             (true) in
