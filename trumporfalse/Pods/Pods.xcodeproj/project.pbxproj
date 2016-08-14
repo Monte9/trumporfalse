@@ -211,6 +211,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E57DBB35F3B28A1A2D0FF5753EC6069 /* Pods-trumporfalse.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -286,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 569ACA61A565A1BB563BC87BB7BF65EB /* Pods-trumporfalse.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -309,6 +311,7 @@
 				PRODUCT_NAME = Pods_trumporfalse;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
