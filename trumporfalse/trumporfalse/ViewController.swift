@@ -37,7 +37,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     @IBOutlet weak var timeUpClock: UIImageView!
     
     @IBOutlet weak var beginningCounter: UILabel!
+    @IBOutlet weak var line: UILabel!
     
+    @IBOutlet weak var clockImage: UIImageView!
+    @IBOutlet weak var streakImage: UIImageView!
     
     
    // @IBOutlet weak var trumpImage_pos: UIImageView!
@@ -118,6 +121,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         play("trumpAudio")
         
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
+        
+        countdownTimer.hidden = true
+        streakLabel.hidden = true
+        clockImage.hidden = true
+        streakImage.hidden = true
+        line.hidden = true
+        navigationItem.title = ""
+        
     }
     
     func startGame() {
@@ -204,12 +215,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     func beginningCountdown() {
         beginningCount -= 1
         beginningCounter.text = "\(beginningCount)"
+     
         
         if (beginningCount == 0) {
             beginningCounter.alpha = 0
             beginningCounter.text = "Go!"
             UIView.animateWithDuration(0.8, animations: {
                 self.beginningCounter.alpha = 1.0
+                self.streakLabel.hidden = false
+                self.countdownTimer.hidden = false
+                self.clockImage.hidden = false
+                self.streakImage.hidden = false
+                self.line.hidden = false
+                self.navigationItem.title = "New High Score: \(Int(self.highestStreak!))"
             }) {
                 (true) in
                 self.beginningCounter.hidden = true
