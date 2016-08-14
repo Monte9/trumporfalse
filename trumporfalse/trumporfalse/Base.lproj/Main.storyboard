@@ -10,7 +10,7 @@
         <!--Trump Or False-->
         <scene sceneID="RAo-Ov-ADD">
             <objects>
-                <viewController storyboardIdentifier="startViewController" id="kWf-eA-FXi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startViewController" id="kWf-eA-FXi" customClass="StartViewController" customModule="trumporfalse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6ff-AJ-NqJ"/>
                         <viewControllerLayoutGuide type="bottom" id="ts7-3p-j7C"/>
@@ -19,14 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New-York-City-Wallpaper-For-Iphone-6" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-92-lHn">
-                                <rect key="frame" x="0.0" y="64" width="750" height="672"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1334" id="75D-YU-Lei"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="AVt-SR-qu2"/>
-                                    <constraint firstAttribute="width" constant="750" id="cVi-WX-XU7"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elephant-republican-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-f6-clV">
                                 <rect key="frame" x="187" y="75" width="40" height="40"/>
                                 <constraints>
@@ -45,24 +37,45 @@
                                     <segue destination="BYZ-38-t0r" kind="push" id="9YH-Y4-7S2"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="One Finger-100" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-LE-pdh">
+                                <rect key="frame" x="134" y="521" width="146" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="60T-WU-qEC"/>
+                                    <constraint firstAttribute="height" constant="118" id="kKC-2H-qup"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New-York-City-Wallpaper-For-Iphone-6" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-92-lHn">
+                                <rect key="frame" x="0.0" y="64" width="750" height="672"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1334" id="75D-YU-Lei"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="AVt-SR-qu2"/>
+                                    <constraint firstAttribute="width" constant="750" id="cVi-WX-XU7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="3ha-Hm-cL1"/>
                             <constraint firstItem="ts7-3p-j7C" firstAttribute="top" secondItem="xzg-92-lHn" secondAttribute="bottom" id="4gS-PP-ezC"/>
                             <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="HS5-l2-ig4"/>
+                            <constraint firstItem="oVF-LE-pdh" firstAttribute="leading" secondItem="9sZ-jd-H9y" secondAttribute="leadingMargin" constant="114" id="IxX-vA-v4h"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="JT1-X7-Fh0"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="Jrr-D7-WDf"/>
                             <constraint firstItem="DLf-f6-clV" firstAttribute="top" secondItem="9sZ-jd-H9y" secondAttribute="top" constant="75" id="K0v-Wy-0D1"/>
                             <constraint firstAttribute="trailing" secondItem="xzg-92-lHn" secondAttribute="trailing" id="OpZ-LD-KKY"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="leading" secondItem="9sZ-jd-H9y" secondAttribute="leading" id="PjC-h0-evO"/>
+                            <constraint firstItem="ts7-3p-j7C" firstAttribute="top" secondItem="oVF-LE-pdh" secondAttribute="bottom" constant="97" id="dbc-yA-Pus"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="top" secondItem="6ff-AJ-NqJ" secondAttribute="bottom" id="eXG-V9-h2e"/>
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="hxa-cj-2mV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oVF-LE-pdh" secondAttribute="trailing" constant="114" id="ud4-HE-d5G"/>
                             <constraint firstItem="DLf-f6-clV" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="y5c-et-xU2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trump Or False" id="G93-8y-TaC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="fingerPoint" destination="oVF-LE-pdh" id="wuc-Kh-P9Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ph-z2-qPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +147,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="__________________________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f4-hL-5so">
                                 <rect key="frame" x="28" y="110" width="361" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gas-96" translatesAutoresizingMaskIntoConstraints="NO" id="gfs-Dq-3J8">
@@ -232,6 +245,7 @@
         <image name="Alarm Clock-96" width="96" height="96"/>
         <image name="Gas-96" width="96" height="96"/>
         <image name="New-York-City-Wallpaper-For-Iphone-6" width="1080" height="1920"/>
+        <image name="One Finger-100" width="100" height="100"/>
         <image name="Stopwatch-104.png" width="104" height="104"/>
         <image name="Trump_home" width="770" height="773"/>
         <image name="correct-mark.png" width="512" height="512"/>

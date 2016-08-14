@@ -107,8 +107,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     
     func startGame() {
         quoteBox.text = quotes.quotes[index]!.statement
-        trueButton.hidden = false
-        falseButton.hidden = false
+        
         
         UIView.animateWithDuration(1.5, animations: {
             self.play()
@@ -121,7 +120,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
 
     func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance) {
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
-
+        trueButton.hidden = false
+        falseButton.hidden = false
     }
     
     func play() {
@@ -239,8 +239,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
                         self.index = self.index % self.quotes.numEntries
                         self.quoteBox.text = self.quotes.quotes[self.index]!.statement
                     
-                        self.trueButton.hidden = false
-                        self.falseButton.hidden = false
+                        //self.trueButton.hidden = false
+                        //self.falseButton.hidden = false
                         //self.trumpImage_pos.hidden = false
                         
                         self.countdown = 10

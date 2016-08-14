@@ -12,6 +12,8 @@
 		187C508A1D6088BC00649516 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 187C50881D6088BC00649516 /* icon.png */; };
 		29BB81CA390A44CACF278430 /* Pods_trumporfalse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBB5278259F96D316F71174 /* Pods_trumporfalse.framework */; };
 		A6E752371D60972F0035CD20 /* QuoteSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E752361D60972F0035CD20 /* QuoteSource.swift */; };
+		D03D90DF1D60A85200B35A86 /* One Finger-100.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D90DE1D60A85200B35A86 /* One Finger-100.png */; };
+		D0C0DAB01D60AA7F0080154F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0DAAF1D60AA7F0080154F /* StartViewController.swift */; };
 		EC4B01721D5FC95A007FCBCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */; };
 		EC4B01741D5FC95A007FCBCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B01731D5FC95A007FCBCF /* ViewController.swift */; };
 		EC4B01771D5FC95A007FCBCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4B01751D5FC95A007FCBCF /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		1EBB5278259F96D316F71174 /* Pods_trumporfalse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trumporfalse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6AEA989A97862889440226 /* Pods-trumporfalse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trumporfalse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trumporfalse/Pods-trumporfalse.debug.xcconfig"; sourceTree = "<group>"; };
 		A6E752361D60972F0035CD20 /* QuoteSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteSource.swift; sourceTree = "<group>"; };
+		D03D90DE1D60A85200B35A86 /* One Finger-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "One Finger-100.png"; sourceTree = "<group>"; };
+		D0C0DAAF1D60AA7F0080154F /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		EC4B016E1D5FC95A007FCBCF /* trumporfalse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trumporfalse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4B01711D5FC95A007FCBCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC4B01731D5FC95A007FCBCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +96,10 @@
 				A6E752361D60972F0035CD20 /* QuoteSource.swift */,
 				EC4B01731D5FC95A007FCBCF /* ViewController.swift */,
 				EC4B01751D5FC95A007FCBCF /* Main.storyboard */,
+				D0C0DAAF1D60AA7F0080154F /* StartViewController.swift */,
 				EC4B018B1D603274007FCBCF /* trumpAudio.mp3 */,
 				EC4B01781D5FC95A007FCBCF /* Assets.xcassets */,
+				D03D90DE1D60A85200B35A86 /* One Finger-100.png */,
 				187C50871D6088BC00649516 /* correct-mark.png */,
 				187C50881D6088BC00649516 /* icon.png */,
 				187C50851D6075F500649516 /* Stopwatch-104.png */,
@@ -164,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03D90DF1D60A85200B35A86 /* One Finger-100.png in Resources */,
 				187C50861D6075F500649516 /* Stopwatch-104.png in Resources */,
 				187C508A1D6088BC00649516 /* icon.png in Resources */,
 				EC4B017C1D5FC95A007FCBCF /* LaunchScreen.storyboard in Resources */,
@@ -230,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4B01741D5FC95A007FCBCF /* ViewController.swift in Sources */,
+				D0C0DAB01D60AA7F0080154F /* StartViewController.swift in Sources */,
 				A6E752371D60972F0035CD20 /* QuoteSource.swift in Sources */,
 				EC4B01721D5FC95A007FCBCF /* AppDelegate.swift in Sources */,
 			);
