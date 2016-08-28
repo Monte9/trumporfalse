@@ -40,8 +40,8 @@
                                     <segue destination="Qs7-lI-2yA" kind="modal" id="NlZ-8D-fdT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press the button to start the game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-yj-oem">
-                                <rect key="frame" x="18" y="637" width="379" height="91"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button to start the game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-yj-oem">
+                                <rect key="frame" x="20" y="617" width="374" height="111"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,7 +65,6 @@
                             <constraint firstItem="hrV-Oe-mi3" firstAttribute="centerY" secondItem="9sZ-jd-H9y" secondAttribute="centerY" id="Jrr-D7-WDf"/>
                             <constraint firstItem="xzg-92-lHn" firstAttribute="top" secondItem="6ff-AJ-NqJ" secondAttribute="bottom" constant="-64" id="Jw8-wR-0Iu"/>
                             <constraint firstItem="DLf-f6-clV" firstAttribute="top" secondItem="9sZ-jd-H9y" secondAttribute="top" constant="75" id="K0v-Wy-0D1"/>
-                            <constraint firstItem="OYQ-yj-oem" firstAttribute="centerX" secondItem="9sZ-jd-H9y" secondAttribute="centerX" id="N3T-Rx-HWm"/>
                             <constraint firstItem="oVF-LE-pdh" firstAttribute="top" secondItem="hrV-Oe-mi3" secondAttribute="bottom" constant="44" id="OCU-ss-XSk"/>
                             <constraint firstAttribute="trailing" secondItem="OYQ-yj-oem" secondAttribute="trailing" constant="20" id="SGl-pM-gjM"/>
                             <constraint firstItem="OYQ-yj-oem" firstAttribute="top" relation="lessThanOrEqual" secondItem="oVF-LE-pdh" secondAttribute="bottom" priority="750" id="V9K-Nr-HbL"/>
@@ -90,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ph-z2-qPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="706"/>
+            <point key="canvasLocation" x="1054" y="698"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -190,7 +189,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stopwatch-104.png" translatesAutoresizingMaskIntoConstraints="NO" id="wAE-qA-ei9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stopwatch-104" translatesAutoresizingMaskIntoConstraints="NO" id="wAE-qA-ei9">
                                 <rect key="frame" x="359" y="85" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="829-8s-1Ti"/>
@@ -262,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2089" y="706"/>
+            <point key="canvasLocation" x="2261" y="706"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wXr-Mr-Z4u">
@@ -280,7 +279,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKv-Bk-YQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="706"/>
+            <point key="canvasLocation" x="570" y="698"/>
         </scene>
         <!--Rules View Controller-->
         <scene sceneID="21C-De-ZAY">
@@ -322,7 +321,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1269" y="-120"/>
+            <point key="canvasLocation" x="966" y="-308"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EFT-5y-IEY">
@@ -340,7 +339,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdf-IA-LE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557" y="706"/>
+            <point key="canvasLocation" x="1721" y="706"/>
         </scene>
     </scenes>
     <resources>
@@ -348,7 +347,7 @@
         <image name="Gas-96" width="96" height="96"/>
         <image name="New-York-City-Wallpaper-For-Iphone-6" width="1080" height="1920"/>
         <image name="One Finger-100" width="100" height="100"/>
-        <image name="Stopwatch-104.png" width="104" height="104"/>
+        <image name="Stopwatch-104" width="104" height="104"/>
         <image name="Trump_home" width="770" height="773"/>
         <image name="correct-mark.png" width="512" height="512"/>
         <image name="elephant-republican-symbol" width="512" height="512"/>

@@ -12,12 +12,6 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesizerDelegate {
 
-
-//    struct Quote {
-//        var statement: String
-//        var valid: Bool
-//    }
-
     //Store state of the speech Uterrance for pause/play functionality
     struct TextToSpeech {
         static var pausing: Bool? = false
@@ -42,12 +36,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     @IBOutlet weak var clockImage: UIImageView!
     @IBOutlet weak var streakImage: UIImageView!
 
-
-    @IBOutlet weak var newspaperPiece: UIImageView!
-
-   // @IBOutlet weak var trumpImage_pos: UIImageView!
-
-     // text-to-speech code
+    // text-to-speech code
     let speechSynthesizer = AVSpeechSynthesizer()
 
     var rate: Float!
@@ -67,25 +56,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
 
     var highestStreak: Int? = 0
 
-//    func applyBlurEffect(image: UIImage){
-//        var image : UIImage = UIImage(named:"usa_chicago_reflection_buildings_city_lights_58590_750x1334")!
-//        var imageToBlur = CIImage(image: image)
-//        var blurfilter = CIFilter(name: "CIGaussianBlur")
-//        blurfilter!.setValue(imageToBlur, forKey: "inputImage")
-//        var resultImage = blurfilter!.valueForKey("outputImage") as! CIImage
-//        var blurredImage = UIImage(CIImage: resultImage)
-//        self.blurImageView.image = blurredImage
-//
-//    }
-//
-
-
-//    var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-//    var blurEffectView = UIVisualEffectView(effect: blurEffect)
-//    blurEffectView.frame = view.bounds
-//    blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight] // for supporting device rotation
-//    view.addSubview(blurEffectView)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         speechSynthesizer.delegate = self
@@ -120,8 +91,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         self.quoteBox.backgroundColor = UIColor(white: 1, alpha: 0.5)
 
         beginningCounter.text = "\(beginningCount)"
-
-        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"beginningCountdown", userInfo: nil, repeats: true)
+        
+        self.play("ready")
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:#selector(ViewController.beginningCountdown), userInfo: nil, repeats: true)
         
         countdownTimer.hidden = true
         streakLabel.hidden = true
@@ -144,7 +116,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     }
 
     func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance) {
-        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"updateCounter", userInfo: nil, repeats: true)
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:#selector(ViewController.updateCounter), userInfo: nil, repeats: true)
         trueButton.hidden = false
         falseButton.hidden = false
     }
@@ -153,10 +125,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         do {
             if let path = NSBundle.mainBundle().pathForResource(s, ofType: "mp3") {
                 try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "mp3")
-                print(path)
                 if let sound = audioPlayer {
                     sound.prepareToPlay()
-                    print("playing path now..")
                     sound.play()
                 }
             }
@@ -175,7 +145,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
         speechUtterance.pitchMultiplier = pitch
         speechUtterance.volume = volume
         speechSynthesizer.speakUtterance(speechUtterance)
-
     }
 
     //Text-to-Speech default settings
@@ -218,9 +187,21 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     func beginningCountdown() {
         beginningCount -= 1
         beginningCounter.text = "\(beginningCount)"
+        
+        if(beginningCount != 0) {
+            self.play("ready")
+        }
+        
         if (beginningCount == 0) {
             beginningCounter.alpha = 0
             beginningCounter.text = "Go!"
+            
+            if(myTimer != nil)
+            {
+                myTimer?.invalidate()
+                myTimer = nil;
+            }
+            
             UIView.animateWithDuration(0.8, animations: {
                 self.beginningCounter.alpha = 1.0
                 self.streakLabel.hidden = false
@@ -228,7 +209,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
                 self.clockImage.hidden = false
                 self.streakImage.hidden = false
                 self.line.hidden = false
-                self.navigationItem.title = "New High Score: \(Int(self.highestStreak!))"
+                self.navigationItem.title = "High Score: \(Int(self.highestStreak!))"
             }) {
                 (true) in
                 self.beginningCounter.hidden = true
@@ -387,7 +368,5 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
             })
         }
     }
-
-
 
 }
